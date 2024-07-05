@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon.png">
+
+  <link rel="stylesheet" href="styles/styles.css">
+
 </head>
 
 <body class="page__body">
@@ -16,8 +19,15 @@
       <div class="container">
         <div class="logo">
           <a href="#">
-            <img class="logo__image" src="./images/logo-mobile.svg" alt="Логотип компании" width="33" height="38">
-            <img class="logo__text" src="./images/logo-text.svg" width="101" height="18" alt="Название компании Cat energy">
+
+            <picture>
+              <source media="(min-width: 1200px)" width="70" height="59" type="image/svg+xml" srcset="./images/logo-desktop.svg">
+              <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="./images/logo-tablet.svg">
+              <img class="logo__image" src="./images/logo-mobile.svg" alt="Логотип компании." width="33" height="38">
+            </picture>
+            <img class="logo__text" src="./images/logo-text.svg" width="101" height="18" alt="Название компании Cat energy.">
+
+
           </a>
         </div>
         <nav class="main-nav">

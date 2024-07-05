@@ -5,3 +5,16 @@
 
 /* BLOCKS */
 @import "./blocks/header.scss";
+
+
+.hero {
+  &__slogan {
+    height: 400px;
+    margin: 0;
+    background-image: linear-gradient(to top, transparent 178px, #008000 178px);
+
+    @media (min-width: 768px) {
+      background-image: linear-gradient(to top, transparent 178px, transparent 178px);
+    }
+  }
+}
