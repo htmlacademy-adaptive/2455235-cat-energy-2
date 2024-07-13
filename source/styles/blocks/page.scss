@@ -1,0 +1,15 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0;
+  font-size: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 1;
+  background-color: $color-accent;
+  color: $color-basis;
+  display: flex;
+  flex-direction: column;
+}

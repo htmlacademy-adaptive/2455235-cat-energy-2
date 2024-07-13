@@ -6,8 +6,9 @@
   <title>Cat energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon.png">
-
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
 
 </head>
@@ -18,16 +19,17 @@
     <header class="main-header">
       <div class="container">
         <div class="logo">
-          <a href="#">
-
+          <a class="logo__link" href="#">
             <picture>
-              <source media="(min-width: 1200px)" width="70" height="59" type="image/svg+xml" srcset="./images/logo-desktop.svg">
-              <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="./images/logo-tablet.svg">
-              <img class="logo__image" src="./images/logo-mobile.svg" alt="Логотип компании." width="33" height="38">
+              <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logo_desktop.svg">
+              <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logo_tablet.svg">
+              <img class="logo__image" src="images/logo_mobile.svg" alt="Логотип компании." width="33" height="38">
             </picture>
-            <img class="logo__text" src="./images/logo-text.svg" width="101" height="18" alt="Название компании Cat energy.">
-
-
+            <picture>
+              <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="images/logo_text_light.svg">
+              <source media="(min-width: 768px)" width="101" height="18" type="image/svg+xml" srcset="images/logo_text_light.svg">
+              <img class="logo__image" src="images/logo_text_dark.svg" alt="Логотип компании." width="101" height="18">
+            </picture>
           </a>
         </div>
         <nav class="main-nav">
@@ -60,11 +62,15 @@
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
           <a class="hero__button button" href="select-programm.html">Подобрать программу</a>
         </div>
-        <img class="hero__image" src="./images/index-can-mobile.png" alt="Упаковка еды для кота" width="280" height="270">
+        <picture>
+          <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/can_desktop@1x.png 1x, images/can_desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/can_tablet@1x.png 1x, images/can_tablet@2x.png 2x">
+          <img class="hero__image" src="images/can_mobile@1x.png" srcset="images/can_mobile@2x.png 2x" alt=" Упаковка еды для кота" width="280" height="270">
+        </picture>
       </div>
     </section>
   </div>
-  <main class="main-container">
+  <main class="main-content">
     <section class="programs">
       <div class="container">
         <h2 class="visually-hidden">Программы</h2>
@@ -72,7 +78,9 @@
           <li class="programs__item programs__item--slim">
             <h3 class="programs__title">Похудение</h3>
             <p class="programs__description">Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="button-secondary" href="catalog.html">Каталог slim</a>
+            <a class="button-secondary" href="catalog.html">Каталог slim
+
+            </a>
           </li>
           <li class="programs__item programs__item--add-weight">
             <h3 class="programs__title">Набор массы</h3>
@@ -132,28 +140,38 @@
         <div class="experience__slider slider">
           <ul class="slider__list">
             <li>
-              <img class="slider__image-before" src="./images/cat_before.jpg" width="280" height="256" alt="Фото кота с лишним весом">
+              <picture>
+                <source media="(min-width: 768px)" width="560" height="512" type="image/jpeg" srcset="images/cat_before_tablet_desktop@1x.jpg 1x, images/cat_before_tablet_desktop@2x.jpg 2x">
+                <img class="slider__image-before" src="images/cat_before_mobile@1x.jpg" srcset="images/cat_before_mobile@2x.jpg 2x" width="280" height="256" alt="Фото кота с лишним весом">
+              </picture>
             </li>
             <li>
-              <img class="slider__image-after" src="./images/cat_after.jpg" width="280" height="256" alt="Фото кота с лишним весом">
+              <picture>
+                <source media="(min-width: 768px)" width="560" height="512" type="image/jpeg" srcset="images/cat_after_tablet_desktop@1x.jpg 1x, images/cat_after_tablet_desktop@2x.jpg 2x">
+                <img class="slider__image-after" src="images/cat_after_mobile@1x.jpg" srcset="images/cat_after_mobile@2x.jpg 2x" width="280" height="256" alt="Фото худого кота">
+              </picture>
             </li>
           </ul>
           <button class="slider__button" type="button">
             <span class="visually-hidden">Ползунок для фото</span>
-            <svg class="slider__control" aria-hidden="true" focusable="false" width="40" height="258" viewBox="0 0 40 258" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="18" width="4" height="257.02" rx="2" fill="#666666" />
-              <rect x="1" y="110" width="38" height="38" rx="19" fill="white" />
-              <rect x="1" y="110" width="38" height="38" rx="19" stroke="#666666" stroke-width="2" />
-              <path d="M16 120L8 129L16 138V120Z" fill="#666666" />
-              <path d="M32 129L24 120V138L32 129Z" fill="#666666" />
+            <svg class="slider__control" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <rect x="1" y="1" width="38" height="38" rx="19" fill="white" />
+              <rect x="1" y="1" width="38" height="38" rx="19" stroke="#666666" stroke-width="2" />
+              <path d="M16 11L8 20L16 29V11Z" fill="#666666" />
+              <path d="M32 20L24 11V29L32 20Z" fill="#666666" />
             </svg>
+
           </button>
         </div>
       </div>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <img src="./images/map.png" alt="Карта с указанием местонахождения фирмы" width="320" height="362">
+      <picture>
+        <source media="(min-width: 1440px)" width="1440" height="400" type="image/png" srcset="images/map_desktop@1x.png 1x, images/map_desktop@2x.png 2x">
+        <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="images/map_tablet@1x.png 1x, images/map_tablet@2x.png 2x">
+        <img src="images/map_mobile@1x.png" srcset="images/map_mobile@2x.png 2x" alt="Карта с указанием местонахождения фирмы" width="320" height="362">
+      </picture>
       <div class="map__content container">
         <p class="map__invitation">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="address">
@@ -166,10 +184,18 @@
   </main>
   <footer class="main-footer">
     <div class="main-footer__wrap container">
-      <div class="logo logo--short">
-        <a href="#">
-          <img class="logo__image" src="./images/logo-mobile.svg" alt="Логотип компании" width="33" height="38">
-          <img class="logo__text" src="./images/logo-text.svg" width="101" height="18" alt="Название компании Cat energy">
+      <div class="logo logo--no-image">
+        <a class="logo__link" href="#">
+          <picture>
+            <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logo_desktop.svg">
+            <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logo_tablet.svg">
+            <img class="logo__image" src="images/logo_mobile.svg" alt="Логотип компании." width="33" height="38">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="images/logo_text_light.svg">
+            <source media="(min-width: 768px)" width="101" height="18" type="image/svg+xml" srcset="images/logo_text_light.svg">
+            <img class="logo__text" src="images/logo_text_dark.svg" alt="Логотип компании." width="101" height="18">
+          </picture>
         </a>
       </div>
       <div class="social">

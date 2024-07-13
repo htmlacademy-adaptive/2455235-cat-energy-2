@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <title>Cat energy каталог</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -12,16 +16,24 @@
   <header class="main-header">
     <div class="container">
       <div class="logo">
-        <a href="#">
-          <img class="logo__image" src="./images/logo-mobile.svg" alt="Логотип компании" width="33" height="38">
-          <img class="logo__text" src="./images/logo-text.svg" width="101" height="18" alt="Название компании Cat energy">
+        <a class="logo__link" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logo_desktop.svg">
+            <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logo_tablet.svg">
+            <img class="logo__image" src="images/logo_mobile.svg" alt="Логотип компании." width="33" height="38">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="images/logo_text_light.svg">
+            <source media="(min-width: 768px)" width="101" height="18" type="image/svg+xml" srcset="images/logo_text_light.svg">
+            <img class="logo__image" src="images/logo_text_dark.svg" alt="Логотип компании." width="101" height="18">
+          </picture>
         </a>
       </div>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list nav-list nav-list--close">
+        <ul class="main-nav__list nav-list nav-list--close nav-list--index">
           <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link--current" href="#">
+            <a class="nav-list__link nav-list__link--current" href="index.html">
               Главная
             </a>
           </li>
@@ -39,155 +51,201 @@
       </nav>
     </div>
   </header>
-  <main class="main-container">
+  <main class="main-content">
     <section class="catalog">
       <div class="container">
         <h1 class="catalog__title">Каталог продукции</h1>
         <ul class="catalog__list product-list">
           <li class="product-list__item">
             <article class="card">
-              <div class="card__content-wrap">
-                <a class="card__link" href="#" tabindex="-1">
-                  <img class="card__image" src="./images/catalog/catalog-1.png" width="68" height="86" alt="Cat Energy PRO 500 г">
-                </a>
-                <div class="card__info">
-                  <a class="card__link" href="#">
-                    <h3 class="card__title">Cat Energy PRO 500&nbsp;г</h3>
-                  </a>
-                  <p class="card__text">Масса</p>
-                  <p class="card__weight">500&nbsp;г</p>
-                  <p class="card__text">Вкус</p>
-                  <p class="card__taste">Курица</p>
-                  <p class="card__text">Цена</p>
-                  <p class="card__price">700&nbsp;₽</p>
-                </div>
+              <a class="card__link-image" href="#" tabindex="-1">
+                <picture>
+                  <source media="(min-width: 1440px)" width="169" height="210" type="image/png" srcset="images/catalog/product_1_desktop@1x.png 1x, images/catalog/product_1_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" width="200" height="210" type="image/png" srcset="images/catalog/product_1_tablet@1x.png 1x, images/catalog/product_1_tablet@2x.png 2x">
+                  <img class="card__image" src="images/catalog/product_1_mobile@1x.png" srcset="images/catalog/product_1_mobile@2x.png 2x" alt="Cat Energy PRO 500 г." width="140" height="107">
+                </picture>
+              </a>
+              <a class="card__link" href="#">
+                <h3 class="card__title">Cat Energy PRO 500&nbsp;г</h3>
+                <p class="card__subtitle"></p>
+              </a>
+              <div class="card__info">
+                <p class="card__text">Масса</p>
+                <p class="card__weight">500&nbsp;г</p>
+                <p class="card__text">Вкус</p>
+                <p class="card__taste">Курица</p>
+                <p class="card__text">Цена</p>
+                <p class="card__price">700&nbsp;₽</p>
               </div>
               <a class="button" href="#">Заказать</a>
             </article>
           </li>
           <li class="product-list__item">
             <article class="card">
-              <div class="card__content-wrap">
-                <a class="card__link" href="#" tabindex="-1">
-                  <img class="card__image" src="./images/catalog/catalog-2.png" width="84" height="100" alt="Cat Energy PRO 1000 г">
-                </a>
-                <div class="card__info">
-                  <a class="card__link" href="#">
-                    <h3 class="card__title">Cat Energy
-                      PRO 1000&nbsp;г</h3>
-                  </a>
-                  <p class="card__text">Масса</p>
-                  <p class="card__weight">1000&nbsp;г</p>
-                  <p class="card__text">Вкус</p>
-                  <p class="card__taste">Курица</p>
-                  <p class="card__text">Цена</p>
-                  <p class="card__price">1000&nbsp;₽</p>
-                </div>
+              <a class="card__link-image" href="#" tabindex="-1">
+                <picture>
+                  <source media="(min-width: 1440px)" width="169" height="210" type="image/png" srcset="images/catalog/product_2_desktop@1x.png 1x, images/catalog/product_2_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" width="200" height="210" type="image/png" srcset="images/catalog/product_2_tablet@1x.png 1x, images/catalog/product_2_tablet@2x.png 2x">
+                  <img class="card__image" src="images/catalog/product_2_mobile@1x.png" srcset="images/catalog/product_2_mobile@2x.png 2x" alt="Cat Energy
+                    PRO 1000г." width="140" height="107">
+                </picture>
+              </a>
+              <a class="card__link" href="#">
+                <h3 class="card__title">Cat Energy
+                  PRO 1000&nbsp;г</h3>
+                <p class="card__subtitle"></p>
+              </a>
+              <div class="card__info">
+                <p class="card__text">Масса</p>
+                <p class="card__weight">1000&nbsp;г</p>
+                <p class="card__text">Вкус</p>
+                <p class="card__taste">Курица</p>
+                <p class="card__text">Цена</p>
+                <p class="card__price">1000&nbsp;₽</p>
               </div>
               <a class="button" href="#">Заказать</a>
             </article>
           </li>
           <li class="product-list__item">
             <article class="card">
-              <div class="card__content-wrap">
-                <a class="card__link" href="#" tabindex="-1">
-                  <img class="card__image" src="./images/catalog/catalog-3.png" width="68" height="78" alt="Cat Energy PRO 1000 г">
-                </a>
-                <div class="card__info">
-                  <a class="card__link" href="#">
-                    <h3 class="card__title">Cat Energy
-                      PRO 500&nbsp;г</h3>
-                  </a>
-                  <p class="card__text">Масса</p>
-                  <p class="card__weight">500&nbsp;г</p>
-                  <p class="card__text">Вкус</p>
-                  <p class="card__taste">Рыба</p>
-                  <p class="card__text">Цена</p>
-                  <p class="card__price">700&nbsp;₽</p>
-                </div>
+              <a class="card__link-image" href="#" tabindex="-1">
+                <picture>
+                  <source media="(min-width: 1440px)" width="169" height="210" type="image/png" srcset="images/catalog/product_3_desktop@1x.png 1x, images/catalog/product_3_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" width="200" height="210" type="image/png" srcset="images/catalog/product_3_tablet@1x.png 1x, images/catalog/product_3_tablet@2x.png 2x">
+                  <img class="card__image" src="images/catalog/product_3_mobile@1x.png" srcset="images/catalog/product_3_mobile@2x.png 2x" alt="Cat Energy PRO 1000 г." width="140" height="107">
+                </picture>
+              </a>
+              <a class="card__link" href="#">
+                <h3 class="card__title">Cat Energy
+                  PRO 500&nbsp;г</h3>
+                <p class="card__subtitle"></p>
+              </a>
+              <div class="card__info">
+                <p class="card__text">Масса</p>
+                <p class="card__weight">500&nbsp;г</p>
+                <p class="card__text">Вкус</p>
+                <p class="card__taste">Рыба</p>
+                <p class="card__text">Цена</p>
+                <p class="card__price">700&nbsp;₽</p>
               </div>
               <a class="button" href="#">Заказать</a>
             </article>
           </li>
           <li class="product-list__item">
             <article class="card">
-              <div class="card__content-wrap">
-                <a class="card__link" href="#" tabindex="-1">
-                  <img class="card__image" src="./images/catalog/catalog-4.png" width="84" height="100" alt="Cat Energy PRO 1000 г">
-                </a>
-                <div class="card__info">
-                  <a class="card__link" href="#">
-                    <h3 class="card__title">Cat Energy
-                      PRO 1000&nbsp;г</h3>
-                  </a>
-                  <p class="card__text">Масса</p>
-                  <p class="card__weight">1000&nbsp;г</p>
-                  <p class="card__text">Вкус</p>
-                  <p class="card__taste">Рыба</p>
-                  <p class="card__text">Цена</p>
-                  <p class="card__price">1000&nbsp;₽</p>
-                </div>
+              <a class="card__link-image" href="#" tabindex="-1">
+                <picture>
+                  <source media="(min-width: 1440px)" width="169" height="210" type="image/png" srcset="images/catalog/product_4_desktop@1x.png 1x, images/catalog/product_4_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" width="200" height="210" type="image/png" srcset="images/catalog/product_4_tablet@1x.png 1x, images/catalog/product_4_tablet@2x.png 2x">
+                  <img class="card__image" src="images/catalog/product_4_mobile@1x.png" srcset="images/catalog/product_4_mobile@2x.png 2x" alt="Cat Energy PRO 1000 г." width="140" height="107">
+                </picture>
+              </a>
+              <a class="card__link" href="#">
+                <h3 class="card__title">Cat Energy
+                  PRO 1000&nbsp;г</h3>
+                <p class="card__subtitle"></p>
+              </a>
+              <div class="card__info">
+                <p class="card__text">Масса</p>
+                <p class="card__weight">1000&nbsp;г</p>
+                <p class="card__text">Вкус</p>
+                <p class="card__taste">Рыба</p>
+                <p class="card__text">Цена</p>
+                <p class="card__price">1000&nbsp;₽</p>
               </div>
               <a class="button" href="#">Заказать</a>
             </article>
           </li>
           <li class="product-list__item">
             <article class="card">
-              <div class="card__content-wrap">
-                <a class="card__link" href="#" tabindex="-1">
-                  <img class="card__image" src="./images/catalog/catalog-5.png" width="84" height="100" alt="Cat Energy slim 500 г">
-                </a>
-                <div class="card__info">
-                  <a class="card__link" href="#">
-                    <h3 class="card__title">Cat Energy
-                      SLIM
-                      500&nbsp;г</h3>
-                  </a>
-                  <p class="card__text">Масса</p>
-                  <p class="card__weight">500&nbsp;г</p>
-                  <p class="card__text">Вкус</p>
-                  <p class="card__taste">Гречка</p>
-                  <p class="card__text">Цена</p>
-                  <p class="card__price">400&nbsp;₽</p>
-                </div>
+              <a class="card__link-image" href="#" tabindex="-1">
+                <picture>
+                  <source media="(min-width: 1440px)" width="169" height="210" type="image/png" srcset="images/catalog/product_5_desktop@1x.png 1x, images/catalog/product_5_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" width="200" height="210" type="image/png" srcset="images/catalog/product_5_tablet@1x.png 1x, images/catalog/product_5_tablet@2x.png 2x">
+                  <img class="card__image" src="images/catalog/product_5_mobile@1x.png" srcset="images/catalog/product_5_mobile@2x.png 2x" alt="Cat Energy slim 500 г." width="140" height="107">
+                </picture>
+              </a>
+              <a class="card__link" href="#">
+                <h3 class="card__title">Cat Energy
+                  SLIM
+                  500&nbsp;г</h3>
+                <p class="card__subtitle"></p>
+              </a>
+              <div class="card__info">
+                <p class="card__text">Масса</p>
+                <p class="card__weight">500&nbsp;г</p>
+                <p class="card__text">Вкус</p>
+                <p class="card__taste">Гречка</p>
+                <p class="card__text">Цена</p>
+                <p class="card__price">400&nbsp;₽</p>
               </div>
               <a class="button" href="#">Заказать</a>
             </article>
           </li>
           <li class="product-list__item">
             <article class="card">
-              <div class="card__content-wrap">
-                <a class="card__link" href="#" tabindex="-1">
-                  <img class="card__image" src="./images/catalog/catalog-5.png" width="84" height="100" alt="Cat Energy slim 1000 г">
-                </a>
-                <div class="card__info">
-                  <a class="card__link" href="#">
-                    <h3 class="card__title">Cat Energy
-                      SLIM
-                      1000&nbsp;г</h3>
-                  </a>
-                  <p class="card__text">Масса</p>
-                  <p class="card__weight">500&nbsp;г</p>
-                  <p class="card__text">Вкус</p>
-                  <p class="card__taste">Гречка</p>
-                  <p class="card__text">Цена</p>
-                  <p class="card__price">400&nbsp;₽</p>
-                </div>
+              <a class="card__link-image" href="#" tabindex="-1">
+                <picture>
+                  <source media="(min-width: 1440px)" width="169" height="210" type="image/png" srcset="images/catalog/product_6_desktop@1x.png 1x, images/catalog/product_6_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" width="200" height="210" type="image/png" srcset="images/catalog/product_6_tablet@1x.png 1x, images/catalog/product_6_tablet@2x.png 2x">
+                  <img class="card__image" src="images/catalog/product_6_mobile@1x.png" srcset="images/catalog/product_6_mobile@2x.png 2x" alt="Cat Energy slim 1000 г." width="140" height="107">
+                </picture>
+              </a>
+              <a class="card__link" href="#">
+                <h3 class="card__title">Cat Energy
+                  SLIM
+                  1000&nbsp;г</h3>
+                <p class="card__subtitle"></p>
+              </a>
+              <div class="card__info">
+                <p class="card__text">Масса</p>
+                <p class="card__weight">500&nbsp;г</p>
+                <p class="card__text">Вкус</p>
+                <p class="card__taste">Гречка</p>
+                <p class="card__text">Цена</p>
+                <p class="card__price">400&nbsp;₽</p>
+              </div>
+              <a class="button" href="#">Заказать</a>
+            </article>
+          </li>
+          <li class="product-list__item">
+            <article class="card">
+              <a class="card__link-image" href="#" tabindex="-1">
+                <picture>
+                  <source media="(min-width: 1440px)" width="169" height="210" type="image/png" srcset="images/catalog/product_7_desktop@1x.png 1x, images/catalog/product_7_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" width="200" height="210" type="image/png" srcset="images/catalog/product_7_tablet@1x.png 1x, images/catalog/product_7_tablet@2x.png 2x">
+                  <img class="card__image" src="images/catalog/product_7_mobile@1x.png" srcset="images/catalog/product_7_mobile@2x.png 2x" alt="Cat Energy slim 1000 г." width="140" height="107">
+                </picture>
+              </a>
+              <a class="card__link" href="#">
+                <h3 class="card__title">Cat Energy
+                  SLIM
+                  500&nbsp;г</h3>
+              </a>
+              <p class="card__subtitle"></p>
+              <div class="card__info">
+                <p class="card__text">Масса</p>
+                <p class="card__weight">500&nbsp;г</p>
+                <p class="card__text">Вкус</p>
+                <p class="card__taste">Рис</p>
+                <p class="card__text">Цена</p>
+                <p class="card__price">500&nbsp;₽</p>
               </div>
               <a class="button" href="#">Заказать</a>
             </article>
           </li>
           <li>
             <article class="card card--last">
-              <div class="card__content-wrap">
-                <a class="card__link" href="#" tabindex="-1">
-                  <img class="card__image" src="#" width="84" height="100" alt="Больше товаров">
-                </a>
+              <a class="card__link-image" href="#" tabindex="-1">
+                <img class="card__image" src="#" width="84" height="100" alt="Больше товаров">
+              </a>
+              <a class="card__link" href="#">
+                <h3 class="card__title">Показать еще 100500 товаров</h3>
+              </a>
+              <p class="card__subtitle">На самом деле вкусов гораздо больше!</p>
+              <div class="card__product-data">
                 <div class="card__info">
-                  <a class="card__link" href="#">
-                    <h3 class="card__title">Показать еще 100500 товаров</h3>
-                  </a>
-                  <p class="card__text">>На самом деле вкусов гораздо больше!</p>
+                  <p class="card__text"></p>
                   <p class="card__weight"></p>
                   <p class="card__text"></p>
                   <p class="card__taste"></p>
@@ -268,25 +326,35 @@
     </section>
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <img src="./images/map.png" alt="Карта с указанием местонахождения фирмы" width="320" height="362">
-      <div class="container">
-        <div class="map__content">
-          <p class="map__invitation">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <address class="address">
-            <p class="address__street">ул. Большая <br>
-              Конюшенная, д. 19/8</p>
-            <p class="address__city">Санкт-Петербург</p>
-          </address>
-        </div>
+      <picture>
+        <source media="(min-width: 1440px)" width="1440" height="400" type="image/png" srcset="images/map_desktop@1x.png 1x, images/map_desktop@2x.png 2x">
+        <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="images/map_tablet@1x.png 1x, images/map_tablet@2x.png 2x">
+        <img src="images/map_mobile@1x.png" srcset="images/map_mobile@2x.png 2x" alt="Карта с указанием местонахождения фирмы" width="320" height="362">
+      </picture>
+      <div class="map__content container">
+        <p class="map__invitation">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+        <address class="address">
+          <p class="address__street">ул. Большая <br>
+            Конюшенная, д. 19/8</p>
+          <p class="address__city">Санкт-Петербург</p>
+        </address>
       </div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__wrap container">
       <div class="logo logo--short">
-        <a href="#">
-          <img class="logo__image" src="./images/logo-mobile.svg" alt="Логотип компании" width="33" height="38">
-          <img class="logo__text" src="./images/logo-text.svg" width="101" height="18" alt="Название компании Cat energy">
+        <a class="logo__link" href="#">
+          <picture>
+            <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logo_desktop.svg">
+            <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logo_tablet.svg">
+            <img class="logo__image" src="images/logo_mobile.svg" alt="Логотип компании." width="33" height="38">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="images/logo_text_light.svg">
+            <source media="(min-width: 768px)" width="101" height="18" type="image/svg+xml" srcset="images/logo_text_light.svg">
+            <img class="logo__image" src="images/logo_text_dark.svg" alt="Логотип компании." width="101" height="18">
+          </picture>
         </a>
       </div>
       <div class="social">

@@ -1,0 +1,11 @@
+.card__subtitle {
+  display: none;
+}
+
+.card--last .card__link-image {
+  display: none;
+}
+
+.card--last .card__subtitle {
+  display: block;
+}

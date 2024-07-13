@@ -1,0 +1,33 @@
+.hero {
+  min-height: 480px;
+  background-image:
+    url("../../images/hero_mobile_background@1x.jpg"),
+    linear-gradient(to top, transparent 178px, #62a63a 178px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center bottom 178px, center;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../../images/hero_mobile_background@2x.jpg"),
+      linear-gradient(to top, transparent 178px, #62a63a 178px);
+    background-size: 320px 302px, auto;
+  }
+
+  @media (min-width: 768px) {
+    background-image: none;
+  }
+
+  @media (min-width: 1440px) {
+    background-image:
+      url("../../images/hero_desktop_background@1x.jpg"),
+      linear-gradient(to right, transparent 50%, #62a63a 50%);
+    background-position: right bottom, right bottom;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../images/hero_desktop_background@2x.jpg"),
+        linear-gradient(to right, transparent 50%, #62a63a 50%);
+      background-size: 50% 694px, auto;
+    }
+  }
+}
