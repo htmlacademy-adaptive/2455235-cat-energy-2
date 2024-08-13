@@ -1,0 +1,45 @@
+.section-title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  color: $basic-white;
+  font-weight: 400;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    font-family: $secondary-font;
+    font-size: 60px;
+    color: $basic-black;
+  }
+
+  &--dark {
+    color: $basic-black;
+  }
+
+  &--smaller-font {
+    font-size: 24px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 40px;
+    }
+  }
+
+  &--with-line {
+    position: relative;
+    width: max-content;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: calc(100% + 40px);
+      width: calc(100vw - 100% - 2 * 40px);
+      height: 2px;
+      background-color: $basic-green;
+    }
+  }
+}

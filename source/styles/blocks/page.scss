@@ -5,11 +5,15 @@
 .page__body {
   min-height: 100%;
   margin: 0;
-  font-size: 20px;
-  font-family: "Oswald", "Arial", sans-serif;
-  line-height: 1;
-  background-color: $color-accent;
-  color: $color-basis;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: $basic-white;
+  color: $basic-black;
   display: flex;
   flex-direction: column;
+}
+
+.no-scroll.page__body {
+  overflow: hidden;
 }

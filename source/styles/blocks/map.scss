@@ -1,0 +1,67 @@
+.map {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.map__content {
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 26px 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    width: 100%;
+    min-height: 200px;
+    padding: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 565px;
+    min-height: 199px;
+    left: 110px;
+    top: 95px;
+    padding: 30px 80px;
+    background-color: $basic-white;
+    column-gap: 87px;
+  }
+}
+
+.map__invitation {
+  width: min-content;
+  margin: 0;
+  color: $special-black;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: min-content;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
+
+.map__address {
+  justify-self: right;
+}
+
+.map__image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.map--dark-background {
+  background-color: #f2f2f2;
+}

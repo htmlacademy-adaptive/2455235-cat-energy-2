@@ -1,33 +1,4 @@
 /* здесь подключите шрифты */
 
-@font-face {
-  font-family: "Oswald";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../../fonts/oswald/oswaldregular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../../fonts/oswald/oswaldregular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Lato";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Lato";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../../fonts/lato/Lato-Regular.woff") format("woff");
-}
+@include font-face("Lato", 400, normal, url("../../fonts/lato/Lato-Regular.woff2") format("woff2"));
+@include font-face("Oswald", 400, normal, url("../../fonts/oswald/oswaldregular.woff2") format("woff2"));

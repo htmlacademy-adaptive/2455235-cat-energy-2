@@ -1,0 +1,23 @@
+.address {
+  font-size: 14px;
+  line-height: 1.43;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: end;
+  }
+}
+
+.address__street {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.address__city {
+  margin: 0;
+}

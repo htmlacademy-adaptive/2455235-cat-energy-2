@@ -1,0 +1,22 @@
+.copyright {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    justify-self: flex-end;
+  }
+}
+
+.copyright__wrap-image {
+  width: 27px;
+  height: 34px;
+}
+
+.copyright__wrap-image svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

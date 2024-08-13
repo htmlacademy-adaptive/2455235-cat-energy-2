@@ -1,0 +1,24 @@
+.logo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+  }
+
+  &--underlined {
+    border-bottom: 1px solid $decorated-light-grey;
+    padding-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.logo-text img {
+  display: block;
+}

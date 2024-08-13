@@ -1,17 +1,38 @@
 /* GLOBAL */
-@import "./common/variables";
-@import "./common/global";
-@import "./common/fonts";
-@import "./common/visually-hidden";
-
+@import "common/variables";
+@import "common/mixins";
+@import "common/fonts";
+@import "common/global";
+@import "common/visually-hidden";
 
 /* BLOCKS */
-@import "./blocks/page";
-@import "./blocks/header";
-@import "./blocks/main-nav";
-@import "./blocks/nav-list";
-@import "./blocks/container";
-@import "./blocks/logo";
-@import "./blocks/main";
-@import "./blocks/hero";
-@import "./blocks/card";
+@import "blocks/page";
+@import "blocks/container";
+@import "blocks/main-header";
+@import "blocks/logo-image";
+@import "blocks/logo-text";
+@import "blocks/main-nav";
+@import "blocks/nav-list";
+@import "blocks/burger";
+@import "blocks/hero";
+@import "blocks/section-title";
+@import "blocks/section-text";
+@import "blocks/button";
+@import "blocks/main-content";
+@import "blocks/programs";
+@import "blocks/application";
+@import "blocks/experience";
+@import "blocks/slider";
+@import "blocks/map";
+@import "blocks/address";
+@import "./blocks/main-footer";
+@import "./blocks/social";
+@import "./blocks/copyright";
+@import "./blocks/catalog";
+@import "./blocks/product-list";
+@import "blocks/card";
+@import "blocks/additions";
+@import "blocks/additions-list";
+@import "blocks/card-addition";
+@import "blocks/subscribe";
+@import "blocks/form";

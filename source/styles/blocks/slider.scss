@@ -1,0 +1,89 @@
+.slider {
+  position: relative;
+  max-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 560px;
+    height: fit-content;
+  }
+}
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+.slider img {
+  object-fit: cover;
+  height: 100%;
+  display: block;
+  object-position: left;
+  background-color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    background-image: linear-gradient(to top, $dark-grey 361px, $basic-white 361px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to bottom, $basic-white 136px, $dark-grey 136px);
+  }
+}
+
+.slider__image-before {
+  position: absolute;
+  width: 50%;
+  top: 0;
+}
+
+.slider__divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    top: 0;
+    bottom: 0;
+    background-color: $special-grey;
+    border-radius: 2px;
+    cursor: col-resize;
+  }
+}
+
+.slider__button {
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  border-radius: 50%;
+  border: 2px solid $special-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.slider__button-icon {
+  display: block;
+  width: 24px;
+  height: 18px;
+}
+
+.slider__button-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: $special-grey;
+}

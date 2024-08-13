@@ -1,0 +1,21 @@
+.main-footer {
+  padding: 40px 0;
+  background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 43px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 54px 0;
+  }
+}
+
+.main-footer__wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

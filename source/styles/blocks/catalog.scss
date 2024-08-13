@@ -1,0 +1,18 @@
+.catalog {
+  padding-top: 27px;
+  border-top: 1px solid $decorative-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    border-top: none;
+  }
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 84px;
+  }
+}

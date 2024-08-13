@@ -1,0 +1,35 @@
+.form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    min-height: 56px;
+  }
+}
+
+
+.form__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 13px;
+  border: 1px solid $decorated-grey-second;
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $text-color;
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 256px;
+  }
+}
