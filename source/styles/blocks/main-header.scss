@@ -1,6 +1,6 @@
 
 .main-header {
-  // --current-link-underline: #{$basic-green};
+  --current-link-underline: #{$basic-green};
   position: relative;
   z-index: 5;
 
@@ -11,7 +11,7 @@
       left: 0;
       right: 0;
       color: $basic-white;
-      // --current-link-underline: #{$basic-white};
+      --current-link-underline: #{$basic-white};
     }
   }
 }
@@ -56,12 +56,12 @@
   color: inherit;
 }
 
-.main-header .nav-list__link--current {
-  @media (min-width: $tablet-width) {
-    text-decoration-color: $basic-green;
-  }
+// .main-header .nav-list__link--current {
+//   @media (min-width: $tablet-width) {
+//     text-decoration-color: $basic-green;
+//   }
 
-  @media (min-width: $desktop-width) {
-    text-decoration-color: $basic-white;
-  }
-}
+//   @media (min-width: $desktop-width) {
+//     text-decoration-color: $basic-white;
+//   }
+// }
