@@ -91,7 +91,7 @@
   height: 50px;
   top: -3px;
   transform: translateX(-50%);
-  background-image: url("../../icons/cat_slim.svg");
+  background-image: url("../../icons/stack.svg#cat_slim");
 
   @media (min-width: $tablet-width) {
     width: 140px;
@@ -111,7 +111,7 @@
   height: 28px;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("../../icons/cat_pro.svg");
+  background-image: url("../../icons/stack.svg#cat_pro");
 
   @media (min-width: $tablet-width) {
     width: 268px;

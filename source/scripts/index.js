@@ -16,6 +16,7 @@ burgerEl.addEventListener('click', () => {
 const sliderDividerEl = document.querySelector('.slider__divider');
 const sliderZoneEl = document.querySelector('.slider');
 const sliderBeforeEl = document.querySelector('.slider__image-before');
+// const bodyEl = document.querySelector('.page__body');
 
 let mouseEvent = false;
 
@@ -30,6 +31,10 @@ sliderDividerEl.addEventListener('mouseup', (e) => {
 });
 
 sliderZoneEl.addEventListener('mouseup', () => {
+  mouseEvent = false;
+});
+
+bodyEl.addEventListener('mouseup', () => {
   mouseEvent = false;
 });
 

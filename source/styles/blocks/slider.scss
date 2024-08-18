@@ -41,49 +41,72 @@
 
 .slider__divider {
   position: absolute;
+  width: 4px;
   top: 0;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: none;
+  padding: 0;
+  border-radius: 2px;
+  background-color: $special-grey;
+  transition: background-color 0.3s;
+  cursor: col-resize;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 4px;
-    top: 0;
-    bottom: 0;
-    background-color: $special-grey;
-    border-radius: 2px;
-    cursor: col-resize;
+  &:hover {
+    background-color: $basic-green;
+  }
+
+  &:hover .slider__button {
+    border: 2px solid $basic-green;
+  }
+
+  &:hover .slider__button::after {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    background-color: $dim-green;
+  }
+
+  &:active .slider__button {
+    border: 2px solid $dim-green;
+  }
+
+  &:active .slider__button::after {
+    background-color: $dim-green;
   }
 }
 
 .slider__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
   width: 40px;
   height: 40px;
-  z-index: 2;
   border-radius: 50%;
   border: 2px solid $special-grey;
+  background-color: $basic-white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
   cursor: pointer;
-  transition: color 0.3s;
-}
+  transition: border 0.3s;
 
-.slider__button-icon {
-  display: block;
-  width: 24px;
-  height: 18px;
-}
-
-.slider__button-icon svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  color: $special-grey;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mask-image: url("../../icons/stack.svg#slider_button");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $special-grey;
+    transition: background-color 0.3s;
+  }
 }

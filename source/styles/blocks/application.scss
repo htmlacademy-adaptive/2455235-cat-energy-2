@@ -103,25 +103,25 @@
 .application__item--nutritionally .application__picture::after {
   width: 30px;
   height: 32px;
-  background-image: url("../../icons/leaf.svg");
+  background-image: url("../../icons/stack.svg#leaf");
 }
 
 .application__item--easy .application__picture::after {
   width: 26px;
   height: 29px;
-  background-image: url("../../icons/powder.svg");
+  background-image: url("../../icons/stack.svg#powder");
 }
 
 .application__item--replaceable .application__picture::after {
   width: 25px;
   height: 30px;
-  background-image: url("../../icons/fork_knife.svg");
+  background-image: url("../../icons/stack.svg#fork_knife");
 }
 
 .application__item--effectively .application__picture::after {
   width: 26px;
   height: 31px;
-  background-image: url("../../icons/clock.svg");
+  background-image: url("../../icons/stack.svg#clock");
 }
 
 .application__info {

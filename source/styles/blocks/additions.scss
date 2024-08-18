@@ -86,7 +86,7 @@
     content: "";
     width: 78px;
     height: 80px;
-    background-image: url("../../icons/gift.svg");
+    background-image: url("../../icons/stack.svg#gift");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -95,7 +95,7 @@
       justify-self: start;
     }
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $desktop-width) {
       justify-self: center;
     }
   }
