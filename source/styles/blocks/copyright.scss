@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: $text-color;
 
   @media (min-width: $tablet-width) {
     width: 168px;
@@ -10,12 +11,35 @@
   }
 }
 
-.copyright__wrap-image {
-  width: 27px;
-  height: 34px;
+.copyright__logo-text {
+  padding: 10px 10px 10px 0;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: inherit;
+  transition: opacity 0.3s;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.copyright__wrap-image svg {
+.copyright__logo-image {
+  width: 27px;
+  height: 34px;
+  color: inherit;
+  transition: opacity 0.3s, color 0.3s;
+
+  &:hover {
+    color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__logo-image svg {
   display: block;
   width: 100%;
   height: 100%;
