@@ -8,7 +8,7 @@
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    flex-flow: row wrap;
   }
 
   @media (min-width: $desktop-width) {
