@@ -8,7 +8,7 @@
   @media (min-width: $tablet-width) {
     padding: 81px 0 0;
     max-width: 324px;
-    background-image: linear-gradient(to bottom, transparent 81px, $basic-grey 81px);
+    background-image: linear-gradient(to bottom, transparent 81px, $color-white-smoke 81px);
   }
 }
 
@@ -59,7 +59,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
-  color: $subtitles-color;
+  color: $color-nero;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -77,7 +77,7 @@
   list-style: none;
   font-size: 12px;
   line-height: 1.33;
-  color: $text-color;
+  color: $color-charcoal;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 32px;
@@ -92,7 +92,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 5px 0;
-    border-bottom: 1px solid $decorated-grey-second;
+    border-bottom: 1px solid $color-very-light-grey;
   }
 }
 
@@ -132,7 +132,7 @@
     display: block;
     width: 30px;
     height: 2px;
-    background-color: $special-grey-third;
+    background-color: $color-light-grey;
 
     @media (min-width: $tablet-width) {
       width: 60px;
@@ -150,7 +150,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 160px 37px 40px;
-    border: 2px solid $basic-grey;
+    border: 2px solid $color-white-smoke;
     display: grid;
     justify-items: center;
     grid-template-rows: auto 1fr;
@@ -176,7 +176,7 @@
   margin-bottom: 21px;
   font-size: 12px;
   line-height: 1.33;
-  color: $text-color;
+  color: $color-charcoal;
   text-align: center;
 
   @media (min-width: $tablet-width) {

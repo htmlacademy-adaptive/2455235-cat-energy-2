@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: $basic-white;
+  background-color: $color-white;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -30,7 +30,7 @@
   display: block;
   width: 100%;
   height: 1px;
-  background-color: $decorated-light-grey;
+  background-color: $color-whisper;
 
   @media (min-width: $tablet-width) {
     content: "";
@@ -43,7 +43,7 @@
   display: block;
   width: 100%;
   height: 1px;
-  background-color: $decorated-light-grey;
+  background-color: $color-whisper;
 
   @media (min-width: $tablet-width) {
     content: "";
@@ -56,7 +56,7 @@
   margin: 0 auto;
   padding: 26px;
   text-decoration: none;
-  color: $basic-black;
+  color: $color-black;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 1;

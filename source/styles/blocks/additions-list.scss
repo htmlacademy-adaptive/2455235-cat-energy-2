@@ -19,14 +19,14 @@
 
 .additions-list__item {
   position: relative;
-  border-bottom: 1px solid $decorated-grey-second;
+  border-bottom: 1px solid $color-very-light-grey;
 
   &:first-child {
-    border-top: 1px solid $decorated-grey-second;
+    border-top: 1px solid $color-very-light-grey;
   }
 
   @media (min-width: $tablet-width) {
-    border: 1px solid $decorated-grey-second;
+    border: 1px solid $color-very-light-grey;
 
     &:not(:first-child) {
       border-top: none;
@@ -35,10 +35,10 @@
 
   @media (min-width: $desktop-width) {
     border: none;
-    border-bottom: 1px solid $decorated-grey-second;
+    border-bottom: 1px solid $color-very-light-grey;
 
     &:first-child {
-      border-top: 1px solid $decorated-grey-second;
+      border-top: 1px solid $color-very-light-grey;
     }
   }
 }

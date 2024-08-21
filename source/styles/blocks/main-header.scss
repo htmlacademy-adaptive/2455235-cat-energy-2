@@ -9,7 +9,7 @@
       top: 0;
       left: 0;
       right: 0;
-      color: $basic-white;
+      color: $color-white;
     }
   }
 }
@@ -56,10 +56,10 @@
 
 .main-header .nav-list__link--current {
   @media (min-width: $tablet-width) {
-    text-decoration-color: $basic-green;
+    text-decoration-color: $color-apple;
   }
 
   @media (min-width: $desktop-width) {
-    text-decoration-color: $basic-white;
+    text-decoration-color: $color-white;
   }
 }

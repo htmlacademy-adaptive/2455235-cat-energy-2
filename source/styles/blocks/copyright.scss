@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: $text-color;
+  color: $color-charcoal;
 
   @media (min-width: $tablet-width) {
     width: 168px;
@@ -31,7 +31,7 @@
   transition: opacity 0.3s, color 0.3s;
 
   &:hover {
-    color: $basic-green;
+    color: $color-apple;
   }
 
   &:active {

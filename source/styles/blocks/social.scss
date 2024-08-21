@@ -3,8 +3,8 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid $decorated-light-grey;
-  color: $special-grey;
+  border-bottom: 1px solid $color-whisper;
+  color: $color-dim-gray;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -29,7 +29,7 @@
   color: inherit;
 
   &:hover {
-    color: $basic-green;
+    color: $color-apple;
   }
 
   &:active {

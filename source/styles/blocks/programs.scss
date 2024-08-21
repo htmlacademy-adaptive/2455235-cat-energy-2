@@ -34,7 +34,7 @@
   grid-template-columns: 50px 1fr;
   grid-template-rows: 50px 1fr min-content;
   padding: 21px 20px 18px;
-  background-color: $basic-grey;
+  background-color: $color-white-smoke;
   gap: 22px 20px;
 
   &:not(:last-child) {
@@ -68,7 +68,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: $basic-green;
+  background-color: $color-apple;
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -180,7 +180,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: $decorative-grey;
+    background-color: $color-gainsboro;
 
     @media (min-width: $tablet-width) {
       content: none;
@@ -198,7 +198,7 @@
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
-  color: $basic-black;
+  color: $color-black;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
