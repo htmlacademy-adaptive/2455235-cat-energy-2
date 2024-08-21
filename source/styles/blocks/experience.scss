@@ -117,20 +117,28 @@
 }
 
 .experience__description {
-  margin: 0 auto -12px;
-  width: 100px;
+  margin: 0 auto;
+  width: min-content;
   padding: 0 11px;
   background-color: $color-whisper-third;
   text-align: center;
   font-size: 12px;
   line-height: 1;
 
+  &:last-child {
+    margin-bottom: -12px;
+  }
+
   @media (min-width: $tablet-width) {
     width: fit-content;
-    margin-bottom: -5px;
+    max-width: calc(100% - 18px);
     padding: 0 8px;
     background-color: $color-white;
     font-size: 14px;
+
+    &:last-child {
+      margin-bottom: -5px;
+    }
   }
 
   @media (min-width: $desktop-width) {
