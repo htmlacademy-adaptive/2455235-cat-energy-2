@@ -97,6 +97,9 @@
   padding-top: 15px;
   border-radius: 3px;
   border: 1px solid $color-very-light-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .experience__number {
@@ -123,7 +126,7 @@
   line-height: 1;
 
   @media (min-width: $tablet-width) {
-    width: 141px;
+    width: fit-content;
     margin-bottom: -5px;
     padding: 0 8px;
     background-color: $color-white;
