@@ -1,5 +1,6 @@
 .application {
   margin-bottom: 49px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 47px;
@@ -79,48 +80,37 @@
 }
 
 .application__picture {
-  position: relative;
   width: 60px;
   height: 60px;
   background-color: $color-apple;
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-width: $tablet-width) {
     width: 80px;
     height: 80px;
     align-self: end;
   }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 }
 
-.application__item--nutritionally .application__picture::after {
-  width: 30px;
-  height: 32px;
+.application__item--nutritionally .application__picture {
   background-image: url("../../icons/stack.svg#leaf");
+  background-size: 30px 32px;
 }
 
-.application__item--easy .application__picture::after {
-  width: 26px;
-  height: 29px;
+.application__item--easy .application__picture {
   background-image: url("../../icons/stack.svg#powder");
+  background-size: 26px 29px;
 }
 
-.application__item--replaceable .application__picture::after {
-  width: 25px;
-  height: 30px;
+.application__item--replaceable .application__picture {
   background-image: url("../../icons/stack.svg#fork_knife");
+  background-size: 25px 30px;
 }
 
-.application__item--effectively .application__picture::after {
-  width: 26px;
-  height: 31px;
+.application__item--effectively .application__picture {
   background-image: url("../../icons/stack.svg#clock");
+  background-size: 26px 31px;
 }
 
 .application__info {

@@ -3,6 +3,12 @@
   position: relative;
   z-index: 5;
 
+  & .nav-list__link--current {
+    @media (min-width: $tablet-width) {
+      text-decoration-color: $color-apple;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     &--on-content {
       position: absolute;
@@ -10,6 +16,10 @@
       left: 0;
       right: 0;
       color: $color-white;
+
+      & .nav-list__link--current {
+        text-decoration-color: $color-white;
+      }
     }
   }
 }
@@ -52,14 +62,4 @@
 .main-header a {
   display: block;
   color: inherit;
-}
-
-.main-header .nav-list__link--current {
-  @media (min-width: $tablet-width) {
-    text-decoration-color: $color-apple;
-  }
-
-  @media (min-width: $desktop-width) {
-    text-decoration-color: $color-white;
-  }
 }
