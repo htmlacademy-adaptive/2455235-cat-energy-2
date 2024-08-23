@@ -68,35 +68,24 @@
   <main class="main-content">
     <section class="section-form">
       <div class="container">
-        <h1 class="section-form__title section-title">Подбор программы</h1>
-        <p class="section-form__description">Заполните анкету, и&nbsp;мы&nbsp;подберем
+        <h1 class="section-form__title section-title section-title--dark">Подбор программы</h1>
+        <p class="section-form__description">Заполните анкету, и&nbsp;мы&nbsp;подберем <br>
           программу питания для вашего кота</p>
         <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="form__filter input-data">
-            <legend class="input-data__title visually-hidden">Введите данные питомца</legend>
-            <ul class="input__list">
-              <li class="filter__item">
-                <label class="filter__control">
-                  <input class="visually-hidden filter__control-input" type="checkbox" name="slim" checked>
-                  <span class="filter__control-mark"></span>
-                  <span class="filter__control-label">Похудение</span>
-                </label>
-              </li>
-              <li class="filter__item">
-                <label class="filter__control">
-                  <input class="visually-hidden filter__control-input" type="checkbox" name="weight-gain">
-                  <span class="filter__control-mark"></span>
-                  <span class="filter__control-label">Набор массы</span>
-                </label>
-              </li>
-              <li class="filter__item">
-                <label class="filter__control">
-                  <input class="visually-hidden filter__control-input" type="checkbox" name="dont-know">
-                  <span class="filter__control-mark"></span>
-                  <span class="filter__control-label">Не&nbsp;знаю (Нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
+          <fieldset class="field-group pet-data">
+            <legend class="pet-data__title visually-hidden">Введите данные питомца</legend>
+            <div class="pet-data__input-wrap">
+              <label class="pet-data__input-label" for="pet-name">Имя:*</label>
+              <input class="pet-data__input" type="text" id="pet-name" name="pet-name" placeholder="барсик" required>
+            </div>
+            <div class="pet-data__input-wrap">
+              <label class="pet-data__input-label" for="pet-weight">Вес (кг):*</label>
+              <input class="pet-data__input" type="number" min="0.5" max="30" id="pet-weight" name="pet-weight" placeholder="7" required>
+            </div>
+            <div class="pet-data__input-wrap">
+              <label class="pet-data__input-label" for="pet-age">Возраст (лет):</label>
+              <input class="pet-data__input" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required>
+            </div>
           </fieldset>
           <fieldset class="form__filter">
             <legend class="filter__title visually-hidden">Выберите программу</legend>
