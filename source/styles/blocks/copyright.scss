@@ -5,6 +5,11 @@
   justify-content: space-between;
   color: $color-charcoal;
 
+  &:has(a:active) .copyright__logo-text,
+  &:has(a:active) .copyright__logo-image {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     width: 168px;
     justify-self: flex-end;
@@ -16,7 +21,7 @@
   text-decoration: none;
   font-size: 16px;
   line-height: 1.25;
-  color: inherit;
+  color: $color-dim-gray;
   transition: opacity 0.3s;
 
   &:active {
@@ -25,17 +30,14 @@
 }
 
 .copyright__logo-image {
-  width: 27px;
-  height: 34px;
   color: inherit;
   transition: opacity 0.3s, color 0.3s;
 
   &:hover {
     color: $color-apple;
   }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
+.copyright__logo-image svg {
+  display: block;
+}
