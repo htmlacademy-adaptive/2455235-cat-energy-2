@@ -1,0 +1,27 @@
+.input {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 13px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: $color-charcoal;
+  outline: none;
+}
+
+.input__data {
+  min-height: 45px;
+  margin: 0;
+  padding: 14px 15px 13px;
+  border: 1px solid $color-whisper-third;
+}
+
+.input__data::placeholder {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: $color-charcoal;
+}

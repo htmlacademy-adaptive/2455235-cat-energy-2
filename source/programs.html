@@ -72,47 +72,58 @@
         <p class="section-form__description">Заполните анкету, и&nbsp;мы&nbsp;подберем <br>
           программу питания для вашего кота</p>
         <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="field-group pet-data">
-            <legend class="pet-data__title visually-hidden">Введите данные питомца</legend>
-            <div class="pet-data__input-wrap">
-              <label class="pet-data__input-label" for="pet-name">Имя:*</label>
-              <input class="pet-data__input" type="text" id="pet-name" name="pet-name" placeholder="барсик" required>
-            </div>
-            <div class="pet-data__input-wrap">
-              <label class="pet-data__input-label" for="pet-weight">Вес (кг):*</label>
-              <input class="pet-data__input" type="number" min="0.5" max="30" id="pet-weight" name="pet-weight" placeholder="7" required>
-            </div>
-            <div class="pet-data__input-wrap">
-              <label class="pet-data__input-label" for="pet-age">Возраст (лет):</label>
-              <input class="pet-data__input" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required>
-            </div>
-          </fieldset>
-          <fieldset class="form__filter">
-            <legend class="filter__title visually-hidden">Выберите программу</legend>
-            <ul class="filter__list">
-              <li class="filter__item">
-                <label class="filter__control">
-                  <input class="visually-hidden filter__control" type="radio" name="program" value="slim" checked>
-                  <span class="filter__control-mark"></span>
-                  <span class="filter__control-label">Похудение</span>
-                </label>
-              </li>
-              <li class="filter__item">
-                <label class="filter__control">
-                  <input class="visually-hidden filter__control" type="radio" name="program" value="gain-weight">
-                  <span class="filter__control-mark"></span>
-                  <span class="filter__control-label">Набор массы</span>
-                </label>
-              </li>
-              <li class="filter__item">
-                <label class="filter__control">
-                  <input class="visually-hidden filter__control" type="radio" name="program" value="not-know">
-                  <span class="filter__control-mark"></span>
-                  <span class="filter__control-label">Не&nbsp;знаю (Нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form__top">
+            <fieldset class="form__field-group form__field-group--bottom-lined">
+              <legend class="visually-hidden">Введите данные питомца</legend>
+              <ul class="form__inputs-list">
+                <li>
+                  <div class="input">
+                    <label class="input__label" for="pet-name">Имя:*</label>
+                    <input class="input__data" type="text" id="pet-name" name="pet-name" placeholder="барсик" required>
+                  </div>
+                </li>
+                <li>
+                  <div class="input">
+                    <label class="input__label" for="pet-weight">Вес (кг):*</label>
+                    <input class="input__data" type="number" min="0.5" max="30" id="pet-weight" name="pet-weight" placeholder="7" required>
+                  </div>
+                </li>
+                <li>
+                  <div class="input">
+                    <label class="input__label" for="pet-age">Возраст (лет):</label>
+                    <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__field-group form__field-group--bottom-lined">
+              <legend class="visually-hidden">Выберите программу</legend>
+              <ul class="form__radio-list">
+                <li class="form__radio-item">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="radio" name="program" value="slim" checked>
+                    <span class="control__mark control__mark--radio"></span>
+                    <span class="control__label">Похудение</span>
+                  </label>
+                </li>
+                <li class="form__radio-item">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="radio" name="program" value="add-weight">
+                    <span class="control__mark control__mark--radio"></span>
+                    <span class="control__label">Набор массы</span>
+                  </label>
+                </li>
+                <li class="form__radio-item">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="radio" name="program" value="not-know" disabled>
+                    <span class="control__mark control__mark--radio"></span>
+                    <span class="control__label">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+          </div>
         </form>
       </div>
     </section>
