@@ -3,13 +3,14 @@
   grid-template-columns: 1fr;
   padding: 13px 0 19px;
 
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 28px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 285px 244px;
     column-gap: 40px;
     align-items: center;
-  }
-
-  @media (min-width: $desktop-width) {
     padding: 15px 0 17px;
   }
 }
@@ -26,7 +27,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  color: $special-black;
+  color: $color-special-black;
   text-transform: uppercase;
 
   @media (min-width: $desktop-width) {
@@ -40,7 +41,7 @@
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
-  color: $text-color;
+  color: $color-charcoal;
   line-height: 1;
 
   @media (min-width: $desktop-width) {

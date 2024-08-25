@@ -3,13 +3,14 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  transition: opacity 0.3s;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-start;
   }
 
   &--underlined {
-    border-bottom: 1px solid $decorated-light-grey;
+    border-bottom: 1px solid $color-whisper;
     padding-bottom: 20px;
 
     @media (min-width: $tablet-width) {

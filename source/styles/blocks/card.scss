@@ -8,7 +8,7 @@
   @media (min-width: $tablet-width) {
     padding: 81px 0 0;
     max-width: 324px;
-    background-image: linear-gradient(to bottom, transparent 81px, $basic-grey 81px);
+    background-image: linear-gradient(to bottom, transparent 81px, $color-white-smoke 81px);
   }
 }
 
@@ -59,7 +59,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
-  color: $subtitles-color;
+  color: $color-nero;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -71,17 +71,13 @@
   }
 }
 
-.card__subtitle {
-  display: none;
-}
-
 .card__info {
   margin: 0;
   margin-bottom: 17px;
   list-style: none;
   font-size: 12px;
   line-height: 1.33;
-  color: $text-color;
+  color: $color-charcoal;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 32px;
@@ -96,7 +92,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 5px 0;
-    border-bottom: 1px solid $decorated-grey-second;
+    border-bottom: 1px solid $color-very-light-grey;
   }
 }
 
@@ -106,7 +102,6 @@
 
 .card__button {
   grid-column: 1 / -1;
-  width: 100%;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -115,8 +110,6 @@
 }
 
 .card--last {
-  display: block;
-  height: 100%;
   padding: 25px 0;
 
   @media (min-width: $tablet-width) {
@@ -126,51 +119,45 @@
 }
 
 .card--last .card__inner {
-  grid-template-columns: 1fr;
-  justify-items: center;
-  grid-template-rows: auto auto 1fr;
-  border: 2px solid $basic-grey;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 37px 40px;
-  }
-}
-
-.card--last .card__link-image {
+  padding-top: 53px;
+  display: block;
   position: relative;
-  margin-bottom: 23px;
-  width: 30px;
-  height: 30px;
 
   &::after,
   &::before {
     content: "";
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    display: block;
+    width: 30px;
     height: 2px;
-    background-color: $special-grey-third;
-  }
+    background-color: $color-light-grey;
 
-  @media (min-width: $tablet-width) {
-    min-height: 161px;
-    width: 100%;
-    margin: 0;
-
-    &::after,
-    &::before {
+    @media (min-width: $tablet-width) {
       width: 60px;
+      top: 50px;
     }
   }
 
+  &::before {
+    transform: translateX(-50%);
+  }
+
   &::after {
-    position: absolute;
-    left: 50%;
     transform: translateX(-50%) rotate(90deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 160px 37px 40px;
+    border: 2px solid $color-white-smoke;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
-.card--last .card__image {
-  display: none;
-}
 
 .card--last .card__title {
   margin: 0;
@@ -184,23 +171,17 @@
   }
 }
 
-.card--last .card__subtitle {
-  display: block;
+.card__description {
   margin: 0;
   margin-bottom: 21px;
   font-size: 12px;
   line-height: 1.33;
-  color: $text-color;
+  color: $color-charcoal;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     max-width: 170px;
-    text-align: center;
     font-size: 16px;
     line-height: 1.13;
   }
-}
-
-.card--last .card__info {
-  display: none;
 }

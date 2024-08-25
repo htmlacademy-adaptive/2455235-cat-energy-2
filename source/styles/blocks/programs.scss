@@ -15,7 +15,14 @@
   padding: 0;
   list-style: none;
 
+  @media (min-width: $tablet-width) {
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   @media (min-width: $desktop-width) {
+    max-width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
@@ -27,7 +34,7 @@
   grid-template-columns: 50px 1fr;
   grid-template-rows: 50px 1fr min-content;
   padding: 21px 20px 18px;
-  background-color: $basic-grey;
+  background-color: $color-white-smoke;
   gap: 22px 20px;
 
   &:not(:last-child) {
@@ -61,7 +68,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: $basic-green;
+  background-color: $color-apple;
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -91,7 +98,7 @@
   height: 50px;
   top: -3px;
   transform: translateX(-50%);
-  background-image: url("../../icons/cat_slim.svg");
+  background-image: url("../../icons/stack.svg#cat_slim");
 
   @media (min-width: $tablet-width) {
     width: 140px;
@@ -111,7 +118,7 @@
   height: 28px;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("../../icons/cat_pro.svg");
+  background-image: url("../../icons/stack.svg#cat_pro");
 
   @media (min-width: $tablet-width) {
     width: 268px;
@@ -173,7 +180,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: $decorative-grey;
+    background-color: $color-gainsboro;
 
     @media (min-width: $tablet-width) {
       content: none;
@@ -191,10 +198,11 @@
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
-  color: $basic-black;
+  color: $color-black;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
+    gap: 25px;
     font-size: 20px;
     line-height: normal;
   }
@@ -202,21 +210,33 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
   }
-
-  &:hover .programs__icon-wrap {
-    transform: scaleX(1.25);
-  }
 }
 
-.programs__icon-wrap {
+.programs__arrow-window {
+  position: relative;
   width: 32px;
   height: 12px;
-  transition: transform 0.3s;
-  transform-origin: left;
+  overflow: hidden;
 }
 
-.programs__icon-wrap svg {
-  display: block;
-  width: 100%;
-  height: 100%;
+.programs__arrow-wrap {
+  width: 32px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-8px) translateY(-50%);
+  background-image: url("../../icons/stack.svg#arrow");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: transform 0.3s;
+}
+
+.programs__link:hover .programs__arrow-wrap {
+  transform: translateX(0) translateY(-50%);
+}
+
+.programs__link:active {
+  opacity: 0.3;
 }
