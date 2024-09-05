@@ -1,4 +1,4 @@
-.control {
+.radio-button {
   position: relative;
   display: block;
   padding-left: 45px;
@@ -9,7 +9,7 @@
   color: $color-charcoal;
 }
 
-.control__input + .control__mark {
+.radio-button__input + .radio-button__mark {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,11 +18,11 @@
   border: 1px solid $color-very-light-grey;
 }
 
-.control__input[type="radio"] + .control__mark {
+.radio-button__input[type="radio"] + .radio-button__mark {
   border-radius: 50%;
 }
 
-.control__input[type="radio"]:checked + .control__mark::before {
+.radio-button__input[type="radio"]:checked + .radio-button__mark::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -35,17 +35,17 @@
 }
 
 
-.control__input:disabled + .control__mark {
+.radio-button__input:disabled + .radio-button__mark {
   opacity: 0.3;
   pointer-events: none;
 }
 
-.control__input:disabled ~ .control__label {
+.radio-button__input:disabled ~ .radio-button__label {
   opacity: 0.3;
   pointer-events: none;
 }
 
-.control__label {
+.radio-button__label {
   display: block;
   padding: 6px 0;
 }

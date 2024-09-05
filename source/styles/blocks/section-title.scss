@@ -14,32 +14,4 @@
   &--dark {
     color: $color-black;
   }
-
-  &--smaller-font {
-    font-size: 24px;
-
-    @media (min-width: $tablet-width) {
-      font-size: 36px;
-    }
-
-    @media (min-width: $desktop-width) {
-      font-size: 40px;
-    }
-  }
-
-  &--with-line {
-    position: relative;
-    width: max-content;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: calc(100% + 40px);
-      width: calc(100vw - 100% - 2 * 40px);
-      height: 2px;
-      background-color: $color-apple;
-    }
-  }
 }

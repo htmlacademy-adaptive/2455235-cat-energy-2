@@ -10,39 +10,6 @@
   margin: 0;
   padding: 0;
   border: none;
-
-  &--bottom-lined {
-    position: relative;
-
-    &::after {
-      content: "";
-      background-color: #ebebeb;
-      width: 100vw;
-      height: 1px;
-      position: absolute;
-      bottom: 0;
-      left: calc(50% - 50vw);
-    }
-  }
-}
-
-.form__inputs-list {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 24px;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
-}
-
-.form__radio-list {
-  margin: 0;
-  padding: 22px 0 19px;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
 }
 
 .form__button {
