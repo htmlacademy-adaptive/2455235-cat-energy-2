@@ -6,14 +6,56 @@
   }
 }
 
-.form__field-group {
+.form__pet-data {
+  position: relative;
   margin: 0;
+  margin-bottom: 22px;
+  width: 100%;
   padding: 0;
+  padding-bottom: 24px;
   border: none;
-}
 
-.form__button {
-  @media (min-width: $tablet-width) {
-    width: 256px;
+  &::after {
+    content: "";
+    background-color: $color-whisper;
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50vw);
   }
 }
+
+.form__pet-data .form__list-item:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.form__inputs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form__choose-program {
+  position: relative;
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+  padding-bottom: 19px;
+  border: none;
+
+  &::after {
+    content: "";
+    background-color: $color-whisper;
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50vw);
+  }
+}
+
+.form__choose-program .form__list-item:not(:last-child) {
+  margin-bottom: 13px;
+}
+

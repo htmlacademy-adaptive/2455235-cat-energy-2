@@ -73,88 +73,81 @@
           программу питания для вашего кота</p>
         <form class="form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="form__top">
-            <section class="pet-data">
-              <h2 class="visually-hidden">Данные питомца</h2>
-              <fieldset class="form__field-group field-group field-group--bottom-lined">
-                <legend class="visually-hidden">Введите данные питомца</legend>
-                <ul class="field-group__inputs-list inputs-list">
-                  <li class="inputs-list__pet-item">
-                    <div class="input">
-                      <label class="input__label" for="pet-name">Имя:*</label>
-                      <input class="input__data" type="text" id="pet-name" name="pet-name" placeholder="барсик" required>
-                    </div>
-                  </li>
-                  <li class="inputs-list__pet-item">
-                    <div class="input">
-                      <label class="input__label" for="pet-weight">Вес (кг):*</label>
-                      <input class="input__data" type="number" min="0.5" max="30" id="pet-weight" name="pet-weight" placeholder="7" required>
-                    </div>
-                  </li>
-                  <li class="inputs-list__pet-item">
-                    <div class="input">
-                      <label class="input__label" for="pet-age">Возраст (лет):</label>
-                      <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required>
-                    </div>
-                  </li>
-                </ul>
-              </fieldset>
-            </section>
-            <section class="radio-programs">
-              <h2 class="visually-hidden">Выбор программы</h2>
-              <fieldset class="form__field-group field-group field-group--bottom-lined">
-                <legend class="visually-hidden">Выберите программу</legend>
-                <ul class="field-group__inputs-list inputs-list">
-                  <li class="inputs-list__program-item">
-                    <label class="radio-button">
-                      <input class="visually-hidden radio-button__input" type="radio" name="program" value="slim" checked>
-                      <span class="radio-button__mark radio-button__mark--radio"></span>
-                      <span class="radio-button__label">Похудение</span>
-                    </label>
-                  </li>
-                  <li class="inputs-list__program-item">
-                    <label class="radio-button">
-                      <input class="visually-hidden radio-button__input" type="radio" name="program" value="add-weight">
-                      <span class="radio-button__mark radio-button__mark--radio"></span>
-                      <span class="radio-button__label">Набор массы</span>
-                    </label>
-                  </li>
-                  <li class="inputs-list__program-item">
-                    <label class="radio-button">
-                      <input class="visually-hidden radio-button__input" type="radio" name="program" value="not-know" disabled>
-                      <span class="radio-button__mark radio-button__mark--radio"></span>
-                      <span class="radio-button__label">Не знаю (Нужен ваш совет)</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-            </section>
-            <section class="owner-data">
-              <h2 class="owner-data__title decorated-title">Данные владельца</h2>
-              <fieldset class="form__field-group">
-                <legend class="visually-hidden">Введите данные владельца</legend>
-                <ul class="field-group__inputs-list inputs-list">
-                  <li>
-                    <div class="input">
-                      <label class="input__label" for="e-mail">E-mail:*</label>
-                      <input class="input__data" type="text" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="input">
-                      <label class="input__label" for="pet-weight">Вес (кг):*</label>
-                      <input class="input__data" type="number" min="0.5" max="30" id="pet-weight" name="pet-weight" placeholder="7" required>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="input">
-                      <label class="input__label" for="pet-age">Возраст (лет):</label>
-                      <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required>
-                    </div>
-                  </li>
-                </ul>
-              </fieldset>
-            </section>
+            <fieldset class="form__pet-data">
+              <legend class="visually-hidden">Введите данные питомца</legend>
+              <ul class="form__inputs-list">
+                <li class="form__list-item">
+                  <div class="input">
+                    <label class="input__label" for="pet-name">Имя:*</label>
+                    <input class="input__data" type="text" id="pet-name" name="pet-name" placeholder="барсик" required>
+                  </div>
+                </li>
+                <li class="form__list-item">
+                  <div class="input">
+                    <label class="input__label" for="pet-weight">Вес (кг):*</label>
+                    <input class="input__data" type="number" min="0.5" max="30" id="pet-weight" name="pet-weight" placeholder="7" required>
+                  </div>
+                </li>
+                <li class="form__list-item">
+                  <div class="input">
+                    <label class="input__label" for="pet-age">Возраст (лет):</label>
+                    <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form__choose-program">
+              <legend class="visually-hidden">Выберите программу</legend>
+              <ul class="form__inputs-list">
+                <li class="form__list-item">
+                  <label class="radio-button">
+                    <input class="visually-hidden radio-button__input" type="radio" name="program" value="slim" checked>
+                    <span class="radio-button__mark radio-button__mark--radio"></span>
+                    <span class="radio-button__label">Похудение</span>
+                  </label>
+                </li>
+                <li class="form__list-item">
+                  <label class="radio-button">
+                    <input class="visually-hidden radio-button__input" type="radio" name="program" value="add-weight">
+                    <span class="radio-button__mark radio-button__mark--radio"></span>
+                    <span class="radio-button__label">Набор массы</span>
+                  </label>
+                </li>
+                <li class="form__list-item">
+                  <label class="radio-button">
+                    <input class="visually-hidden radio-button__input" type="radio" name="program" value="not-know" disabled>
+                    <span class="radio-button__mark radio-button__mark--radio"></span>
+                    <span class="radio-button__label">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
           </div>
+          <fieldset class="form__owner-data">
+            <legend class="visually-hidden">Введите данные владельца</legend>
+            <ul class="form__inputs-list">
+              <li class="form__list-item">
+                <div class="input">
+                  <label class="input__label" for="e-mail">E-mail:*</label>
+                  <input class="input__data" type="text" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required>
+                </div>
+              </li>
+              <li class="form__list-item">
+                <div class="input">
+                  <label class="input__label" for="pet-weight">Вес (кг):*</label>
+                  <input class="input__data" type="number" min="0.5" max="30" id="pet-weight" name="pet-weight" placeholder="7" required>
+                </div>
+              </li>
+              <li class="form__list-item">
+                <div class="input">
+                  <label class="input__label" for="pet-age">Возраст (лет):</label>
+                  <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required>
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+
         </form>
       </div>
     </section>
