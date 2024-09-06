@@ -62,3 +62,10 @@
 .subscribe__form {
   width: 100%;
 }
+
+.subscribe__input {
+  display: block;
+  font-size: 20px;
+  line-height: normal;
+  border: 1px solid $color-very-light-grey;
+}
