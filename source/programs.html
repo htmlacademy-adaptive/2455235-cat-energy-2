@@ -125,29 +125,29 @@
             </fieldset>
           </div>
           <fieldset class="form__owner-data">
-            <legend class="visually-hidden">Введите данные владельца</legend>
+            <legend class="decorated-title">Контактные данные
+              (владельца кота)</legend>
             <ul class="form__inputs-list">
               <li class="form__list-item">
-                <div class="input">
+                <div class="input input--with-icon">
                   <label class="input__label" for="e-mail">E-mail:*</label>
-                  <input class="input__data" type="text" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required>
+                  <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required>
                 </div>
               </li>
               <li class="form__list-item">
-                <div class="input">
-                  <label class="input__label" for="pet-weight">Вес (кг):*</label>
-                  <input class="input__data" type="number" min="0.5" max="30" id="pet-weight" name="pet-weight" placeholder="7" required>
+                <div class="input input--with-icon">
+                  <label class="input__label" for="phone">Телефон:*</label>
+                  <input class="input__data" type="tel" id="phone" name="pet-weight" placeholder="8 (960) 900-60-90" required>
                 </div>
               </li>
-              <li class="form__list-item">
-                <div class="input">
-                  <label class="input__label" for="pet-age">Возраст (лет):</label>
-                  <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required>
-                </div>
-              </li>
+
             </ul>
           </fieldset>
+          <fieldset class="form__comment">
+            <legend class="decorated-title">Комментарий</legend>
+            <input class="input__data" type="email" id="comment" name="pet-name" placeholder="kuklachev@gmail.com" required>
 
+          </fieldset>
         </form>
       </div>
     </section>

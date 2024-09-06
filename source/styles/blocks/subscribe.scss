@@ -60,7 +60,15 @@
 }
 
 .subscribe__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 0;
+  }
 }
 
 .subscribe__input {

@@ -1,7 +1,6 @@
 .input {
   width: 100%;
-  display: grid;
-  grid-template-columns: max-content 1fr;
+  display: flex;
   align-items: center;
   gap: 13px;
   font-family: $secondary-font;
@@ -10,9 +9,25 @@
   text-transform: uppercase;
   color: $color-charcoal;
   outline: none;
+
+  &--with-icon .input__data {
+    padding: 14px 40px 13px 15px;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px 20px;
+  }
+
+  &--with-icon .input__data[type="email"] {
+    background-image: url("../../icons/stack.svg#envelope");
+  }
+
+  &--with-icon .input__data[type="tel"] {
+    background-image: url("../../icons/stack.svg#phone");
+  }
 }
 
 .input__data {
+  flex-grow: 1;
   min-height: 45px;
   padding: 14px 15px 13px;
   border: 1px solid $color-whisper-third;

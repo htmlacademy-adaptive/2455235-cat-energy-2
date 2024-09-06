@@ -59,3 +59,25 @@
   margin-bottom: 13px;
 }
 
+.form__owner-data {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  border: none;
+}
+
+.form__owner-data .form__list-item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.form__owner-data .decorated-title {
+  max-width: 187px;
+  margin-bottom: 35px;
+}
+
+.form__comment {
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+  border: none;
+}
