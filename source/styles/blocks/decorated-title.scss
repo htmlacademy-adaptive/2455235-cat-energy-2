@@ -1,6 +1,7 @@
 .decorated-title {
   position: relative;
   width: max-content;
+  margin: 0;
   font-family: $secondary-font;
   font-size: 24px;
   font-weight: 400;
@@ -8,7 +9,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 32px;
- }
+  }
 
   @media (min-width: $desktop-width) {
     font-size: 40px;
@@ -20,7 +21,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: calc(100% + 40px);
-    width: calc(100vw - 100% - 2 * 40px);
+    right: calc(100% - 100vw - 40px);
     height: 2px;
     background-color: $color-apple;
   }
@@ -31,8 +32,8 @@
     top: 50%;
     transform: translateY(-50%);
     left: calc(100% + 40px - 100vw);
-    right: calc(100% - 40px);
+    right: calc(100% + 40px);
     height: 2px;
-    background-color: red;
+    background-color: $color-apple;
   }
 }
