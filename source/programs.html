@@ -145,9 +145,46 @@
           </fieldset>
           <fieldset class="form__comment">
             <legend class="decorated-title">Комментарий</legend>
-            <input class="input__data" type="email" id="comment" name="pet-name" placeholder="kuklachev@gmail.com" required>
+            <div class="input">
+              <!-- <label class="input__label" for="pet-age">Возраст (лет):</label> -->
+              <textarea class="input__data" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
 
           </fieldset>
+          <fieldset class="form__choose-additions">
+            <legend class="decorated-title">Дополнительно</legend>
+            <ul class="form__inputs-list">
+              <li class="form__list-item">
+                <label class="checkbox">
+                  <input class="visually-hidden radio-button__input" type="checkbox" name="sweetener" value="sweetener" checked>
+                  <span class="radio-button__mark radio-button__mark--radio"></span>
+                  <span class="radio-button__label">сахарозаменитель</span>
+                </label>
+              </li>
+              <li class="form__list-item">
+                <label class="radio-button">
+                  <input class="visually-hidden radio-button__input" type="checkbox" name="water" value="water">
+                  <span class="radio-button__mark radio-button__mark--radio"></span>
+                  <span class="radio-button__label">питьевая вода</span>
+                </label>
+              </li>
+              <li class="form__list-item">
+                <label class="radio-button">
+                  <input class="visually-hidden radio-button__input" type="checkbox" name="milk" value="milk">
+                  <span class="radio-button__mark radio-button__mark--radio"></span>
+                  <span class="radio-button__label">молоко</span>
+                </label>
+              </li>
+              <li class="form__list-item">
+                <label class="radio-button">
+                  <input class="visually-hidden radio-button__input" type="checkbox" name="vitamins" value="vitamins">
+                  <span class="radio-button__mark radio-button__mark--radio"></span>
+                  <span class="radio-button__label">витамины</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
         </form>
       </div>
     </section>
