@@ -1,7 +1,8 @@
 .product-list {
   display: grid;
-  grid-template-columns: 1fr;
-  margin: 0;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 280px));
+  column-gap: 30px;
+  justify-content: center;
   padding: 0;
   list-style: none;
   position: relative;
@@ -17,10 +18,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(324px, 324px));
     gap: 60px;
-    max-width: 708px;
-    margin: 0 auto;
 
     &::before {
       content: none;
@@ -28,9 +27,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 100%;
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(245px, 245px));
     gap: 63px 80px;
   }
 }
