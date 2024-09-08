@@ -9,4 +9,14 @@
   text-transform: uppercase;
   color: $color-charcoal;
   border: 1px solid $color-whisper-third;
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }

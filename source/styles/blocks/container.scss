@@ -11,4 +11,15 @@
   @media (min-width: $desktop-width) {
     padding: 0 40px;
   }
+
+  &--narrow {
+    @media (min-width: $tablet-width) {
+      max-width: 1000px;
+      padding: 0 70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 40px;
+    }
+  }
 }

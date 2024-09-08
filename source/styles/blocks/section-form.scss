@@ -2,11 +2,24 @@
   padding: 27px 0 32px;
   border-top: 1px solid $color-gainsboro;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 0 60px;
+    border-top: none;
+  }
 }
 
 .section-form__title {
   margin: 0;
   margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .section-form__description {
@@ -16,4 +29,10 @@
   font-size: 14px;
   line-height: 1.29;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }

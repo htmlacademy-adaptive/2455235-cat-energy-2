@@ -10,6 +10,11 @@
   color: $color-charcoal;
   outline: none;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
+
   &--with-icon .input__data::after {
     content: "";
     position: absolute;
@@ -43,5 +48,12 @@
   font: inherit;
   text-transform: inherit;
   color: inherit;
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px;
+  }
 }
 
+.input__data::placeholder {
+  color: $color-charcoal;
+}

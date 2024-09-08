@@ -1,3 +1,11 @@
+.form__top {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+}
+
 .form__pet-data {
   position: relative;
   margin: 0;
@@ -7,6 +15,11 @@
   padding-bottom: 24px;
   border: none;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+    padding-bottom: 0;
+  }
+
   &::after {
     content: "";
     background-color: $color-whisper;
@@ -15,11 +28,19 @@
     position: absolute;
     bottom: 0;
     left: calc(50% - 50vw);
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
   }
 }
 
 .form__pet-data .form__list-item:not(:last-child) {
   margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__inputs-list {
@@ -36,6 +57,12 @@
   padding-bottom: 19px;
   border: none;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+    padding: 23px 27px 27px;
+    border: 1px solid $color-whisper-third;
+  }
+
   &::after {
     content: "";
     background-color: $color-whisper;
@@ -44,6 +71,10 @@
     position: absolute;
     bottom: 0;
     left: calc(50% - 50vw);
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
   }
 }
 
@@ -56,15 +87,28 @@
   margin-bottom: 24px;
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .form__owner-data .form__list-item:not(:last-child) {
   margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__owner-data .decorated-title {
   max-width: 187px;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    margin-bottom: 76px;
+  }
 }
 
 .form__comment {
@@ -72,10 +116,18 @@
   margin-bottom: 23px;
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .form__comment .decorated-title {
   margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 87px;
+  }
 }
 
 .form__choose-additions {
@@ -83,19 +135,52 @@
   margin-bottom: 34px;
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
 }
 
 .form__choose-additions .decorated-title {
   margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.form__choose-additions .form__inputs-list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 60px;
+  }
 }
 
 .form__choose-additions .form__list-item:not(:last-child) {
   margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__bottom {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    align-items: center;
+  }
 }
 
 .form__button {
   max-width: 550px;
   margin: 0 auto 21px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .form__remark {
@@ -103,4 +188,8 @@
   text-align: center;
   font-size: 14px;
   line-height: 1.14;
+
+  @media (min-width: $tablet-width) {
+    justify-self: start;
+  }
 }

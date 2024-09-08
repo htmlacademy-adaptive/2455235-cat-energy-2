@@ -7,11 +7,17 @@
   line-height: 1.13;
   text-transform: uppercase;
   color: $color-charcoal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
 
 .radio-button__input + .radio-button__mark {
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   width: 30px;
   height: 30px;
