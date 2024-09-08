@@ -1,11 +1,3 @@
-.form {
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    min-height: 56px;
-  }
-}
-
 .form__pet-data {
   position: relative;
   margin: 0;
@@ -86,10 +78,6 @@
   margin-bottom: 38px;
 }
 
-.form__comment .input__data {
-  min-height: 280px;
-}
-
 .form__choose-additions {
   margin: 0;
   margin-bottom: 34px;
@@ -99,4 +87,8 @@
 
 .form__choose-additions .decorated-title {
   margin-bottom: 36px;
+}
+
+.form__choose-additions .form__list-item:not(:last-child) {
+  margin-bottom: 12px;
 }

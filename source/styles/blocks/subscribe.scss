@@ -33,20 +33,16 @@
     width: 100%;
     max-width: 632px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 752px;
+    max-width: 726px;
   }
 }
 
 .subscribe__tagline {
   margin: 0;
   margin-bottom: 24px;
-  width: 250px;
   text-align: center;
   font-family: $secondary-font;
   font-size: 16px;
@@ -54,28 +50,31 @@
 
 
   @media (min-width: $tablet-width) {
-    width: 100%;
     font-size: 24px;
     line-height: 1.33;
   }
 }
 
 .subscribe__form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    gap: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    min-height: 56px;
   }
 }
 
 .subscribe__input {
-  display: block;
-  font-size: 20px;
-  padding: 13px;
-  line-height: normal;
-  border: 1px solid $color-very-light-grey;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.subscribe__button {
+  @media (min-width: $tablet-width) {
+    width: 256px;
+  }
 }

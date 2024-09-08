@@ -71,28 +71,21 @@
         <h1 class="section-form__title section-title section-title--dark">Подбор программы</h1>
         <p class="section-form__description">Заполните анкету, и&nbsp;мы&nbsp;подберем <br>
           программу питания для вашего кота</p>
-        <form class="form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form__top">
             <fieldset class="form__pet-data">
               <legend class="visually-hidden">Введите данные питомца</legend>
               <ul class="form__inputs-list">
                 <li class="form__list-item">
-                  <div class="input">
-                    <label class="input__label" for="pet-name">Имя:*</label>
-                    <input class="input__data" type="text" id="pet-name" name="pet-name" placeholder="барсик" required>
-                  </div>
+                  <label class="input" for="pet-name">Имя:*<input class="input__data" type="text" id="pet-name" name="pet-name" placeholder="барсик" required></label>
+
                 </li>
                 <li class="form__list-item">
-                  <div class="input">
-                    <label class="input__label" for="pet-weight">Вес (кг):*</label>
-                    <input class="input__data" type="number" min="0.5" max="30" id="pet-weight" name="pet-weight" placeholder="7" required>
-                  </div>
+                  <label class="input" for="pet-weight">Вес (кг):* <input class="input__data" type="number" min="0" max="30" id="pet-weight" name="pet-weight" placeholder="7" required></label>
                 </li>
                 <li class="form__list-item">
-                  <div class="input">
-                    <label class="input__label" for="pet-age">Возраст (лет):</label>
-                    <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required>
-                  </div>
+                  <label class="input" for="pet-age">Возраст (лет): <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required></label>
+
                 </li>
               </ul>
             </fieldset>
@@ -129,26 +122,21 @@
               (владельца кота)</legend>
             <ul class="form__inputs-list">
               <li class="form__list-item">
-                <div class="input input--with-icon">
-                  <label class="input__label" for="e-mail">E-mail:*</label>
-                  <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required>
-                </div>
+
+                <label class="input input--with-icon" for="e-mail">E-mail:* <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required></label>
+
               </li>
               <li class="form__list-item">
-                <div class="input input--with-icon">
-                  <label class="input__label" for="phone">Телефон:*</label>
-                  <input class="input__data" type="tel" id="phone" name="pet-weight" placeholder="8 (960) 900-60-90" required>
-                </div>
+
+                <label class="input input--with-icon" for="phone">Телефон:* <input class="input__data" type="tel" id="phone" name="pet-weight" placeholder="8 (960) 900-60-90" required></label>
+
               </li>
 
             </ul>
           </fieldset>
           <fieldset class="form__comment">
             <legend class="decorated-title">Комментарий</legend>
-            <div class="input">
-              <!-- <label class="input__label" for="pet-age">Возраст (лет):</label> -->
-              <textarea class="input__data" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
+            <textarea class="textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
 
           </fieldset>
           <fieldset class="form__choose-additions">
@@ -156,35 +144,35 @@
             <ul class="form__inputs-list">
               <li class="form__list-item">
                 <label class="checkbox">
-                  <input class="visually-hidden radio-button__input" type="checkbox" name="sweetener" value="sweetener" checked>
-                  <span class="radio-button__mark radio-button__mark--radio"></span>
-                  <span class="radio-button__label">сахарозаменитель</span>
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="sweetener" value="sweetener" checked>
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__label">сахарозаменитель</span>
                 </label>
               </li>
               <li class="form__list-item">
-                <label class="radio-button">
-                  <input class="visually-hidden radio-button__input" type="checkbox" name="water" value="water">
-                  <span class="radio-button__mark radio-button__mark--radio"></span>
-                  <span class="radio-button__label">питьевая вода</span>
+                <label class="checkbox">
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="water" value="water">
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__label">питьевая вода</span>
                 </label>
               </li>
               <li class="form__list-item">
-                <label class="radio-button">
-                  <input class="visually-hidden radio-button__input" type="checkbox" name="milk" value="milk">
-                  <span class="radio-button__mark radio-button__mark--radio"></span>
-                  <span class="radio-button__label">молоко</span>
+                <label class="checkbox">
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="milk" value="milk">
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__label">молоко</span>
                 </label>
               </li>
               <li class="form__list-item">
-                <label class="radio-button">
-                  <input class="visually-hidden radio-button__input" type="checkbox" name="vitamins" value="vitamins">
-                  <span class="radio-button__mark radio-button__mark--radio"></span>
-                  <span class="radio-button__label">витамины</span>
+                <label class="checkbox">
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="vitamins" value="vitamins">
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__label">витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-
+          <button class="button" type="submit">Отправить заявку</button>
         </form>
       </div>
     </section>

@@ -10,25 +10,34 @@
   color: $color-charcoal;
   outline: none;
 
-  &--with-icon .input__data {
-    padding: 14px 40px 13px 15px;
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 20px 20px;
+  &--with-icon .input__data::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    background-color: $color-black;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
   }
 
-  &--with-icon .input__data[type="email"] {
-    background-image: url("../../icons/stack.svg#envelope");
+  &--with-icon .input__data[type="email"]::after {
+    mask-image: url("../../icons/stack.svg#envelope");
   }
 
-  &--with-icon .input__data[type="tel"] {
-    background-image: url("../../icons/stack.svg#phone");
+  &--with-icon .input__data[type="tel"]::after {
+    mask-image: url("../../icons/stack.svg#phone");
   }
 }
 
 .input__data {
+  position: relative;
   flex-grow: 1;
   min-height: 45px;
+  height: 100%;
   padding: 14px 14px 13px;
   border: 1px solid $color-whisper-third;
   font: inherit;
