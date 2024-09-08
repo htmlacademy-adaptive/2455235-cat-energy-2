@@ -4,6 +4,10 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .form__pet-data {
@@ -19,6 +23,11 @@
     margin-bottom: 72px;
     padding-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+
 
   &::after {
     content: "";
@@ -63,6 +72,11 @@
     border: 1px solid $color-whisper-third;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding: 25px 28px;
+  }
+
   &::after {
     content: "";
     background-color: $color-whisper;
@@ -91,6 +105,18 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.form__owner-data .form__inputs-list {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
 }
 
 .form__owner-data .form__list-item:not(:last-child) {
@@ -98,6 +124,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -120,6 +150,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .form__comment .decorated-title {
@@ -139,6 +173,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 52px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .form__choose-additions .decorated-title {
@@ -154,6 +192,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
   }
 }
 
@@ -172,6 +216,10 @@
     column-gap: 60px;
     align-items: center;
   }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+ }
 }
 
 .form__button {
@@ -181,6 +229,10 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+ }
 }
 
 .form__remark {
