@@ -195,7 +195,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
   }
@@ -219,7 +218,7 @@
 
   @media (min-width: $desktop-width) {
     column-gap: 80px;
- }
+  }
 }
 
 .form__button {
@@ -232,7 +231,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 100%;
- }
+  }
 }
 
 .form__remark {
