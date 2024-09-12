@@ -159,7 +159,11 @@
 .programs__description {
   grid-column: 1 / -1;
   position: relative;
+  margin: 0;
   margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $color-charcoal;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
