@@ -69,6 +69,80 @@
   }
 }
 
+.main-header__burger {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__burger-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: $color-black;
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s;
+
+  &--top {
+    transform: translate(-50%, calc(-50% - 8px));
+  }
+
+  &--bottom {
+    transform: translate(-50%, calc(-50% + 8px));
+  }
+}
+
+.is-opened .main-header__burger-line--top {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.is-opened .main-header__burger-line--middle {
+  opacity: 0;
+}
+
+.is-opened .main-header__burger-line--bottom {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+.main-header__nav-list {
+  width: 100vw;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  @media (min-width: $tablet-width) {
+    width: fit-content;
+    max-width: 480px;
+    position: static;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 600px;
+  }
+}
+
+.is-opened.main-header__nav-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 .main-header a {
   display: block;
   color: inherit;

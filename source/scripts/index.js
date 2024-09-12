@@ -1,7 +1,7 @@
 /* в этот файл добавляет скрипты*/
 
 //Открытие и закрытие меню
-const burgerEl = document.querySelector('.burger');
+const burgerEl = document.querySelector('.main-header__burger');
 const navListEl = document.querySelector('.nav-list');
 const bodyEl = document.querySelector('.page__body');
 

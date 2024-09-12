@@ -2,12 +2,20 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
   background-color: $color-white;
   display: flex;
   align-items: center;
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
+    visibility: visible;
+    max-width: 480px;
+    position: static;
+    margin-left: auto;
+    opacity: 1;
     flex-flow: row wrap;
   }
 
@@ -98,4 +106,9 @@
     text-underline-offset: 8px;
     text-decoration-thickness: 2px;
   }
+}
+
+.is-opened.main-nav__list {
+  opacity: 1;
+  visibility: visible;
 }
