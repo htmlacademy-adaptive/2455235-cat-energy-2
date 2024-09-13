@@ -5,7 +5,10 @@
 
   @media (min-width: $tablet-width) {
     max-width: 560px;
-    height: fit-content;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: start;
   }
 }
 

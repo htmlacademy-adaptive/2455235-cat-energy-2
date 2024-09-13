@@ -1,4 +1,5 @@
 .input {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -15,7 +16,7 @@
     line-height: normal;
   }
 
-  &--with-icon .input__data::after {
+  &--with-icon::after {
     content: "";
     position: absolute;
     width: 20px;
@@ -23,23 +24,27 @@
     top: 50%;
     transform: translateY(-50%);
     right: 12px;
-    background-color: $color-black;
+    background-color: $color-nero;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 100%;
-  }
-
-  &--with-icon .input__data[type="email"]::after {
     mask-image: url("../../icons/stack.svg#envelope");
-  }
-
-  &--with-icon .input__data[type="tel"]::after {
-    mask-image: url("../../icons/stack.svg#phone");
   }
 }
 
+.input__e-mail.input--with-icon::after {
+  mask-image: url("../../icons/stack.svg#envelope");
+}
+
+.input__phone.input--with-icon::after {
+  mask-image: url("../../icons/stack.svg#phone");
+}
+
+.input--with-icon:has(.input__data:active)::after {
+  background-color: $color-apple;
+}
+
 .input__data {
-  position: relative;
   flex-grow: 1;
   min-height: 45px;
   height: 100%;
@@ -56,4 +61,14 @@
 
 .input__data::placeholder {
   color: $color-charcoal;
+}
+
+.error {
+  &::after {
+    background-color: $color-light-coral;
+  }
+
+  .input__data {
+    border: 1px solid $color-light-coral;
+  }
 }

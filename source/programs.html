@@ -35,7 +35,7 @@
           </picture>
         </a>
         <nav class="main-header__main-nav">
-          <!-- Чтобы преобразовать линии в иконку закрыть добавьте класс is-opened к элементу с классом burger -->
+          <!-- Чтобы преобразовать линии в иконку "закрыть" добавьте класс is-opened к элементу с классом burger -->
           <button class="main-header__burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
             <span class="main-header__burger-line main-header__burger-line--top"></span>
@@ -72,6 +72,7 @@
         <p class="section-form__description">Заполните анкету, и&nbsp;мы&nbsp;подберем <br>
           программу питания для вашего кота</p>
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+          <!-- чтобы сообщить пользователю о том, что введены неверные данные, надо элементу с классом input добавить класс  error -->
           <div class="form__top">
             <fieldset class="form__pet-data">
               <legend class="visually-hidden">Введите данные питомца</legend>
@@ -123,12 +124,12 @@
             <ul class="form__inputs-list">
               <li class="form__list-item">
 
-                <label class="input input--with-icon" for="e-mail">E-mail:* <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required></label>
+                <label class="input input__e-mail  input--with-icon error" for="e-mail">E-mail:* <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required></label>
 
               </li>
               <li class="form__list-item">
 
-                <label class="input input--with-icon" for="phone">Телефон:* <input class="input__data" type="tel" id="phone" name="pet-weight" placeholder="8 (960) 900-60-90" required></label>
+                <label class="input input__phone  input--with-icon" for="phone">Телефон:* <input class="input__data" type="tel" id="phone" name="pet-weight" placeholder="8 (960) 900-60-90" required></label>
 
               </li>
 
