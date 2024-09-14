@@ -34,14 +34,14 @@
           </picture>
         </a>
         <nav class="main-header__main-nav">
-          <!-- Чтобы преобразовать линии в иконку закрыть добавьте класс is-opened к элементу с классом burger -->
+          <!-- Чтобы преобразовать линии в иконку закрыть добавьте класс main-header__burger--is-opened к элементу с классом main-header__burger -->
           <button class="main-header__burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
             <span class="main-header__burger-line main-header__burger-line--top"></span>
             <span class="main-header__burger-line main-header__burger-line--middle"></span>
             <span class="main-header__burger-line main-header__burger-line--bottom"></span>
           </button>
-          <!-- Чтобы отобразить меню добавьте класс is-opened к элементу с классом nav-list, к элементу page__body добавить класс no-scroll -->
+          <!-- Чтобы отобразить меню добавьте класс-модификатор nav-list--is-opened к элементу с классом nav-list, к элементу page__body добавить класс-модификатор page__body--no-scroll -->
           <ul class="main-header__nav-list nav-list">
             <li class="nav-list__item">
               <a class="nav-list__link" href="index.html">
@@ -379,6 +379,7 @@
         <div class="subscribe__wrapper-content">
           <p class="subscribe__tagline">Подпишитесь на&nbsp;наши новости и не пропустите ни&nbsp;одного предложения!</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
+            <!-- чтобы сообщить пользователю о том, что введены неверные данные, надо элементу с классом input добавить класс-модификатор input--error -->
             <label class="subscribe__input input">
               <input class="input__data" placeholder="кuklachev@gmail.com" type="email" name="email" required>
             </label>

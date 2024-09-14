@@ -35,14 +35,14 @@
           </picture>
         </a>
         <nav class="main-header__main-nav">
-          <!-- Чтобы преобразовать линии в иконку "закрыть" добавьте класс is-opened к элементу с классом burger -->
+          <!-- Чтобы преобразовать линии в иконку закрыть добавьте класс main-header__burger--is-opened к элементу с классом main-header__burger -->
           <button class="main-header__burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
             <span class="main-header__burger-line main-header__burger-line--top"></span>
             <span class="main-header__burger-line main-header__burger-line--middle"></span>
             <span class="main-header__burger-line main-header__burger-line--bottom"></span>
           </button>
-          <!-- Чтобы отобразить меню добавьте класс is-opened к элементу с классом nav-list, к элементу page__body добавить класс no-scroll -->
+          <!-- Чтобы отобразить меню добавьте класс-модификатор nav-list--is-opened к элементу с классом nav-list, к элементу page__body добавить класс-модификатор page__body--no-scroll -->
           <ul class="main-header__nav-list nav-list">
             <li class="nav-list__item">
               <a class="nav-list__link" href="index.html">
@@ -78,14 +78,26 @@
               <legend class="visually-hidden">Введите данные питомца</legend>
               <ul class="form__inputs-list">
                 <li class="form__list-item">
-                  <label class="input" for="pet-name">Имя:*<input class="input__data" type="text" id="pet-name" name="pet-name" placeholder="барсик" required></label>
+                  <label class="input" for="pet-name">
+                    <span class="input__label">
+                      Имя:*
+                    </span>
+                    <input class="input__data" type="text" id="pet-name" name="pet-name" placeholder="барсик" required></label>
 
                 </li>
                 <li class="form__list-item">
-                  <label class="input" for="pet-weight">Вес (кг):* <input class="input__data" type="number" min="0" max="30" id="pet-weight" name="pet-weight" placeholder="7" required></label>
+                  <label class="input" for="pet-weight">
+                    <span class="input__label">
+                      Вес (кг):*
+                    </span>
+                    <input class="input__data" type="number" min="0" max="30" id="pet-weight" name="pet-weight" placeholder="7" required></label>
                 </li>
                 <li class="form__list-item">
-                  <label class="input" for="pet-age">Возраст (лет): <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required></label>
+                  <label class="input" for="pet-age">
+                    <span class="input__label">
+                      Возраст (лет):
+                    </span>
+                    <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required></label>
 
                 </li>
               </ul>
@@ -124,12 +136,19 @@
             <ul class="form__inputs-list">
               <li class="form__list-item">
 
-                <label class="input input__e-mail  input--with-icon input--error" for="e-mail">E-mail:* <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required></label>
+                <label class="input input__e-mail  input--with-icon input--error" for="e-mail">
+                  <span class="input__label">E-mail:*
+                  </span>
+                  <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required></label>
 
               </li>
               <li class="form__list-item">
 
-                <label class="input input__phone  input--with-icon" for="phone">Телефон:* <input class="input__data" type="tel" id="phone" name="pet-weight" placeholder="8 (960) 900-60-90" required></label>
+                <label class="input input__phone  input--with-icon" for="phone">
+                  <span class="input__label">
+                    Телефон:*
+                  </span>
+                  <input class="input__data" type="tel" id="phone" name="pet-weight" placeholder="8 (960) 900-60-90" required></label>
 
               </li>
 
