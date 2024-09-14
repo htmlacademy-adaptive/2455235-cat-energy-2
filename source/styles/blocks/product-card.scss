@@ -42,11 +42,11 @@
     height: 210px;
     margin-top: -81px;
     margin-bottom: 22px;
-
-    @media (min-width: $tablet-width) {
-      grid-row: 1 / 2;
-    }
   }
+}
+
+.product-card__image-wrap {
+  height: 100%;
 }
 
 .product-card__image {
