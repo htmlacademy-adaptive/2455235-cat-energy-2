@@ -18,13 +18,14 @@
   list-style: none;
   display: flex;
   align-items: center;
+  gap: 4px;
   flex-wrap: wrap;
   max-width: 210px;
 }
 
 .social__link {
   display: block;
-  padding: 20px 12px;
+  padding: 20px 10px;
   transition: color 0.3s, opacity 0.3s;
   text-decoration: none;
   color: inherit;

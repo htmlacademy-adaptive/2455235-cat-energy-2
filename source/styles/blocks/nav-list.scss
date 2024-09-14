@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 4px;
 
   @media (min-width: $tablet-width) {
     visibility: visible;
@@ -63,7 +64,7 @@
 .nav-list__link {
   width: fit-content;
   margin: 0 auto;
-  padding: 26px;
+  padding: 22px;
   text-decoration: none;
   color: $color-black;
   font-family: $secondary-font;
@@ -82,7 +83,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding: 13px 16px;
+    padding: 13px 14px;
     font-family: $secondary-font;
     font-size: 18px;
     line-height: 1.33;
