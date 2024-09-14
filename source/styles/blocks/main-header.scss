@@ -106,15 +106,15 @@
   }
 }
 
-.is-opened .main-header__burger-line--top {
+.main-header__burger--is-opened .main-header__burger-line--top {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.is-opened .main-header__burger-line--middle {
+.main-header__burger--is-opened .main-header__burger-line--middle {
   opacity: 0;
 }
 
-.is-opened .main-header__burger-line--bottom {
+.main-header__burger--is-opened .main-header__burger-line--bottom {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
@@ -136,12 +136,6 @@
     max-width: 600px;
   }
 }
-
-.is-opened.main-header__nav-list {
-  opacity: 1;
-  visibility: visible;
-}
-
 
 .main-header a {
   display: block;

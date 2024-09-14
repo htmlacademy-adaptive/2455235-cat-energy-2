@@ -6,9 +6,9 @@ const navListEl = document.querySelector('.nav-list');
 const bodyEl = document.querySelector('.page__body');
 
 burgerEl.addEventListener('click', () => {
-  burgerEl.classList.toggle('is-opened');
-  navListEl.classList.toggle('is-opened');
-  bodyEl.classList.toggle('no-scroll');
+  burgerEl.classList.toggle('main-header__burger--is-opened');
+  navListEl.classList.toggle('nav-list--is-opened');
+  bodyEl.classList.toggle('page__body--no-scroll');
 });
 
 //Слайдер

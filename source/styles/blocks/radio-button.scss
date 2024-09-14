@@ -7,6 +7,11 @@
   line-height: 1.13;
   text-transform: uppercase;
   color: $color-charcoal;
+  cursor: pointer;
+
+  &:hover .radio-button__mark {
+    border: 1px solid $color-silver;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -22,6 +27,7 @@
   width: 30px;
   height: 30px;
   border: 1px solid $color-very-light-grey;
+  transition: border 0.3s;
 }
 
 .radio-button__input[type="radio"] + .radio-button__mark {
@@ -39,7 +45,6 @@
   border-radius: 50%;
   background-color: $color-apple;
 }
-
 
 .radio-button__input:disabled + .radio-button__mark {
   opacity: 0.3;

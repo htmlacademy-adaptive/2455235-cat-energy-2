@@ -9,6 +9,11 @@
   text-transform: uppercase;
   color: $color-charcoal;
   border: 1px solid $color-whisper-third;
+  transition: border 0.3s;
+
+  &:hover {
+    border: 1px solid $color-very-light-grey;
+  }
 
   &::placeholder {
     color: inherit;

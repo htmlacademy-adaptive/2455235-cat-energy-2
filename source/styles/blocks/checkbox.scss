@@ -7,6 +7,11 @@
   line-height: 1.13;
   text-transform: uppercase;
   color: $color-charcoal;
+  cursor: pointer;
+
+  &:hover .checkbox__mark {
+    border: 1px solid $color-silver;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -22,6 +27,7 @@
   width: 30px;
   height: 30px;
   border: 1px solid $color-very-light-grey;
+  transition: border 0.3s;
 }
 
 .checkbox__input[type="checkbox"]:checked + .checkbox__mark::before {
