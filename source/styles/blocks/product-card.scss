@@ -20,6 +20,7 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
   height: 100%;
+  grid-template-rows: 1fr auto;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr;
