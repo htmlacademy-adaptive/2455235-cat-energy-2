@@ -15,6 +15,11 @@
     border: 1px solid $color-very-light-grey;
   }
 
+  &:has(.input__data:disabled) {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: normal;
