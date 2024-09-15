@@ -1,5 +1,4 @@
 .nav-list {
-  margin: 0;
   padding: 0;
   list-style: none;
   visibility: hidden;
@@ -13,9 +12,7 @@
 
   @media (min-width: $tablet-width) {
     visibility: visible;
-    max-width: 480px;
     position: static;
-    margin-left: auto;
     opacity: 1;
     flex-flow: row wrap;
   }

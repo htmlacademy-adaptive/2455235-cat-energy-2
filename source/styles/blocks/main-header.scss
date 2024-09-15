@@ -65,7 +65,8 @@
 
 .main-header__main-nav {
   @media (min-width: $tablet-width) {
-    margin-left: auto;
+    margin-left: 80px;
+    flex-grow: 1;
   }
 }
 
@@ -140,6 +141,7 @@
 
 
 .main-header__nav-list {
+  margin: 0;
   width: 100vw;
   position: absolute;
   top: 100%;
@@ -147,14 +149,13 @@
 
   @media (min-width: $tablet-width) {
     width: fit-content;
-    max-width: 480px;
     position: static;
     margin-left: auto;
   }
 
-  @media (min-width: $desktop-width) {
-    max-width: 600px;
-  }
+  // @media (min-width: $desktop-width) {
+  //   max-width: 600px;
+  // }
 }
 
 .main-header__main-nav--is-opened .nav-list {
