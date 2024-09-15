@@ -2,13 +2,10 @@
 
 //Открытие и закрытие меню
 const burgerEl = document.querySelector('.main-header__burger');
-const navListEl = document.querySelector('.nav-list');
-const bodyEl = document.querySelector('.page__body');
+const mainNav = document.querySelector('.main-header__main-nav');
 
 burgerEl.addEventListener('click', () => {
-  burgerEl.classList.toggle('main-header__burger--is-opened');
-  navListEl.classList.toggle('nav-list--is-opened');
-  bodyEl.classList.toggle('page__body--no-scroll');
+  mainNav.classList.toggle('main-header__main-nav--is-opened');
 });
 
 //Слайдер
@@ -16,7 +13,7 @@ burgerEl.addEventListener('click', () => {
 const sliderDividerEl = document.querySelector('.slider__divider');
 const sliderZoneEl = document.querySelector('.slider');
 const sliderBeforeEl = document.querySelector('.slider__image-before');
-// const bodyEl = document.querySelector('.page__body');
+const bodyEl = document.querySelector('.page__body');
 
 let mouseEvent = false;
 

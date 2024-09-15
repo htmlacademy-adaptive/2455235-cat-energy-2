@@ -15,6 +15,6 @@
   flex-direction: column;
 }
 
-.page__body--no-scroll {
+.page__body:has(.main-header__main-nav--is-opened) {
   overflow: hidden;
 }
