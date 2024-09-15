@@ -127,6 +127,17 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+// если у пользователя не подключился js, открываем меню и скрываем кнопку бургера
+
+.main-header__main-nav--nojs .main-header__burger {
+  display: none;
+}
+
+.main-header__main-nav--nojs .nav-list {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 .main-header__nav-list {
   width: 100vw;

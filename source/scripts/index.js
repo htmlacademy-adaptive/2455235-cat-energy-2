@@ -4,6 +4,9 @@
 const burgerEl = document.querySelector('.main-header__burger');
 const mainNav = document.querySelector('.main-header__main-nav');
 
+mainNav.classList.remove('main-header__main-nav--nojs');
+
+
 burgerEl.addEventListener('click', () => {
   mainNav.classList.toggle('main-header__main-nav--is-opened');
 });
