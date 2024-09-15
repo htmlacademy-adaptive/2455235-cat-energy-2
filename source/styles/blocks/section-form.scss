@@ -1,11 +1,9 @@
 .section-form {
   padding: 27px 0 32px;
-  border-top: 1px solid $color-gainsboro;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
     padding: 40px 0 60px;
-    border-top: none;
   }
 
   @media (min-width: $desktop-width) {

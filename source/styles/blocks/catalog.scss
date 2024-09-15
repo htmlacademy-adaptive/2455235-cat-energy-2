@@ -1,11 +1,9 @@
 .catalog {
   padding-top: 27px;
-  border-top: 1px solid $color-gainsboro;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
     padding-top: 40px;
-    border-top: none;
   }
 }
 

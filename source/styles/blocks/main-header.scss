@@ -3,6 +3,14 @@
   position: relative;
   z-index: 5;
 
+  &--with-line {
+    border-bottom: 1px solid $color-gainsboro;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+    }
+  }
+
   & .nav-list__link--current {
     @media (min-width: $tablet-width) {
       text-decoration-color: $color-apple;
