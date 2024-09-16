@@ -4,6 +4,14 @@
   }
 }
 
+.map .container {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+  }
+}
+
 .map__content {
   max-width: 500px;
   margin: 0 auto;
@@ -19,16 +27,16 @@
     padding: 40px;
   }
 
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    width: 565px;
-    min-height: 199px;
-    left: 110px;
-    top: 95px;
-    padding: 30px 80px;
-    background-color: $color-white;
-    column-gap: 87px;
-  }
+  // @media (min-width: $desktop-width) {
+  //   position: absolute;
+  //   width: 565px;
+  //   min-height: 199px;
+  //   left: 110px;
+  //   top: 95px;
+  //   padding: 30px 80px;
+  //   background-color: $color-white;
+  //   column-gap: 87px;
+  // }
 }
 
 .map__invitation {
@@ -51,17 +59,39 @@
   justify-self: right;
 }
 
+.map__wrap-image {
+  position: absolute;
+  inset: 0;
+}
+
 .map__image {
   display: block;
   object-fit: cover;
   width: 100%;
-  height: 362px;
+  height: 100%;
 
-  @media (min-width: $tablet-width) {
-    height: 400px;
-  }
+  // @media (min-width: $tablet-width) {
+  //   height: 400px;
+  // }
 }
 
 .map--dark-background {
   background-color: #f2f2f2;
+}
+
+.map__wrap {
+  position: relative;
+  min-height: 362px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+  }
+}
+
+.map__wrap iframe {
+  display: block;
+  border: none;
+  height: 100%;
+  position: relative;
+  z-index: 5;
 }
