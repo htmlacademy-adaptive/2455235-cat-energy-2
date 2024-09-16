@@ -18,14 +18,13 @@
   &::after {
     content: "";
     position: absolute;
-    top: 17px;
+    top: calc(1em / 2);
     left: calc(100% + 20px);
     width: 100vw;
     height: 2px;
     background-color: $color-apple;
 
     @media (min-width: $tablet-width) {
-      top: 24px;
       left: calc(100% + 40px);
     }
   }
@@ -33,14 +32,13 @@
   &::before {
     content: "";
     position: absolute;
-    top: 17px;
+    top: calc(1em / 2);
     right: calc(100% + 20px);
     width: 100vw;
     height: 2px;
     background-color: $color-apple;
 
     @media (min-width: $tablet-width) {
-      top: 24px;
       right: calc(100% + 40px);
     }
   }
