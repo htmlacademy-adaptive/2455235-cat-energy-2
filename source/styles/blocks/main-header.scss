@@ -73,7 +73,6 @@
 
 .main-header__main-nav {
   @media (min-width: $tablet-width) {
-    margin-left: 79px;
     flex-grow: 1;
   }
 }
@@ -158,6 +157,8 @@
   @media (min-width: $tablet-width) {
     width: fit-content;
     position: static;
+    margin-left: auto;
+    margin-right: 3px;
   }
 }
 
