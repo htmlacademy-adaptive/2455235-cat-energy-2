@@ -66,6 +66,7 @@
     max-width: 950px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 44px;
     display: flex;
     justify-content: space-between;
   }
@@ -103,6 +104,10 @@
   border: 1px solid $color-very-light-grey;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+  }
 }
 
 .experience__number {

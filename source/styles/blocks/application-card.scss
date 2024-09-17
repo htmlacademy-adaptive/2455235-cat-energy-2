@@ -10,10 +10,6 @@
     grid-template-rows: 120px 1fr;
     gap: 31px 0;
   }
-
-  @media (min-width: $desktop-width) {
-    gap: 31px 0;
-  }
 }
 
 .application-card__picture {
@@ -67,6 +63,10 @@
     font-size: 16px;
     line-height: 1.5;
     align-self: start;
+
+    & br {
+      display: block;
+    }
   }
 }
 
