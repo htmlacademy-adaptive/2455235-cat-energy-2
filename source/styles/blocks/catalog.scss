@@ -17,13 +17,14 @@
 }
 
 .catalog__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 280px));
   column-gap: 30px;
   justify-content: center;
-  padding: 0;
-  list-style: none;
-  position: relative;
 
   &::before {
     content: "";

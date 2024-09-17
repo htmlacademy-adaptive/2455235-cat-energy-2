@@ -38,10 +38,11 @@
 
 .addition-card__info {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   display: flex;
   justify-content: space-between;
   color: $color-charcoal;
+  font-size: 14px;
   line-height: 1;
 
   @media (min-width: $desktop-width) {
