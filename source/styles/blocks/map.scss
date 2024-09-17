@@ -4,14 +4,6 @@
   }
 }
 
-.map .container {
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    inset: 0;
-    background-color: transparent;
-  }
-}
-
 .map__content {
   max-width: 500px;
   margin: 0 auto;
@@ -23,20 +15,20 @@
   @media (min-width: $tablet-width) {
     max-width: 100%;
     width: 100%;
-    min-height: 200px;
+    min-height: 199px;
     padding: 40px;
   }
 
-  // @media (min-width: $desktop-width) {
-  //   position: absolute;
-  //   width: 565px;
-  //   min-height: 199px;
-  //   left: 110px;
-  //   top: 95px;
-  //   padding: 30px 80px;
-  //   background-color: $color-white;
-  //   column-gap: 87px;
-  // }
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: calc(50% - 610px);
+    width: fit-content;
+    gap: 91px;
+    z-index: 5;
+    padding: 40px 80px;
+    background-color: $color-white;
+  }
 }
 
 .map__invitation {
@@ -69,10 +61,6 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
-
-  // @media (min-width: $tablet-width) {
-  //   height: 400px;
-  // }
 }
 
 .map--dark-background {
@@ -81,17 +69,22 @@
 
 .map__wrap {
   position: relative;
-  min-height: 362px;
+  height: 362px;
 
   @media (min-width: $tablet-width) {
-    min-height: 400px;
+    height: 400px;
   }
 }
 
 .map__wrap iframe {
   display: block;
   border: none;
-  height: 100%;
+  width: 100%;
+  object-fit: cover;
   position: relative;
-  z-index: 5;
+  z-index: 4;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }

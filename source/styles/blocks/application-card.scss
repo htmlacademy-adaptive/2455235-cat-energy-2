@@ -10,6 +10,10 @@
     grid-template-rows: 120px 1fr;
     gap: 31px 0;
   }
+
+  @media (min-width: $desktop-width) {
+    gap: 31px 0;
+  }
 }
 
 .application-card__picture {

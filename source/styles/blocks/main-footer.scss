@@ -3,11 +3,11 @@
   background-color: $color-white-smoke;
 
   @media (min-width: $tablet-width) {
-    padding: 43px 0;
+    padding: 40px 0 45px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 54px 0;
+    padding: 53px 0;
   }
 }
 
@@ -17,5 +17,6 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
   }
 }

@@ -22,7 +22,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, min-content);
-    justify-content: space-between;
   }
 }
 
@@ -115,6 +114,7 @@
   line-height: 1;
   margin-bottom: 11px;
   text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -176,7 +176,7 @@
     grid-column: 1 / 2;
     justify-self: start;
     flex-direction: row;
-    gap: 63px;
+    gap: 65px;
     padding-top: 0;
   }
 }
@@ -189,5 +189,6 @@
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
+    align-self: start;
   }
 }

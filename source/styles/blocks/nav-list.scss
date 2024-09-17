@@ -80,7 +80,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding: 13px 14px;
+    padding: 13px 15px;
     font-family: $secondary-font;
     font-size: 18px;
     line-height: 1.33;
@@ -102,7 +102,7 @@
 .nav-list__link--current {
   @media (min-width: $tablet-width) {
     text-decoration-line: underline;
-    text-underline-offset: 8px;
+    text-underline-offset: 13px;
     text-decoration-thickness: 2px;
   }
 }
