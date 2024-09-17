@@ -73,7 +73,7 @@
 
 .main-header__main-nav {
   @media (min-width: $tablet-width) {
-    margin-left: 80px;
+    margin-left: 79px;
     flex-grow: 1;
   }
 }
@@ -83,7 +83,7 @@
   width: 30px;
   height: 30px;
   margin: 0;
-  padding: 0;
+  padding: 4px 0 4px 3px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -105,8 +105,8 @@
 .main-header__burger-line {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 0;
+  transform: translateY(-50%);
   display: block;
   width: 24px;
   height: 2px;
@@ -116,16 +116,16 @@
     opacity 0.2s;
 
   &--top {
-    transform: translate(-50%, calc(-50% - 8px));
+    transform: translateY(calc(-50% - 8px));
   }
 
   &--bottom {
-    transform: translate(-50%, calc(-50% + 8px));
+    transform: translateY(calc(-50% + 8px));
   }
 }
 
 .main-header__main-nav--is-opened .main-header__burger-line--top {
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .main-header__main-nav--is-opened .main-header__burger-line--middle {
@@ -133,7 +133,7 @@
 }
 
 .main-header__main-nav--is-opened .main-header__burger-line--bottom {
-  transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 // если у пользователя не подключился js, открываем меню и скрываем кнопку бургера
@@ -158,12 +158,7 @@
   @media (min-width: $tablet-width) {
     width: fit-content;
     position: static;
-    margin-left: auto;
   }
-
-  // @media (min-width: $desktop-width) {
-  //   max-width: 600px;
-  // }
 }
 
 .main-header__main-nav--is-opened .nav-list {

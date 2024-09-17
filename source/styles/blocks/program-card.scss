@@ -2,19 +2,15 @@
   display: grid;
   grid-template-columns: 50px 1fr;
   grid-template-rows: 50px 1fr min-content;
-  padding: 21px 20px 18px;
+  padding: 23px 20px 15px;
   background-color: $color-white-smoke;
   gap: 22px 20px;
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 200px;
     grid-template-rows: min-content 1fr min-content;
     gap: 24px 53px;
-    padding: 77px 63px 53px 52px;
+    padding: 77px 63px 48px 52px;
 
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -45,6 +41,8 @@
     height: 200px;
     grid-column: 2 / 3;
     grid-row: 1 / -1;
+    align-self: end;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $desktop-width) {
@@ -52,6 +50,8 @@
     height: 100px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    margin-bottom: 0;
+    align-self: stretch;
   }
 }
 
@@ -64,7 +64,7 @@
 .program-card--slim .program-card__image::after {
   width: 36px;
   height: 50px;
-  top: -3px;
+  top: -2px;
   transform: translateX(-50%);
   background-image: url("../../icons/stack.svg#cat_slim");
 
@@ -129,7 +129,7 @@
   grid-column: 1 / -1;
   position: relative;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   font-size: 14px;
   line-height: 1.29;
   color: $color-charcoal;
@@ -150,7 +150,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -22px;
+    bottom: -24px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -165,7 +165,7 @@
 .program-card__link {
   width: fit-content;
   display: flex;
-  gap: 15px;
+  gap: 17px;
   align-items: center;
   grid-column: 1 / -1;
   padding: 7px 0;

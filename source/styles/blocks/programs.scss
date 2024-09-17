@@ -28,3 +28,10 @@
     column-gap: 80px;
   }
 }
+
+.programs__list-item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+

@@ -57,6 +57,10 @@
   line-height: 1.29;
   color: $color-charcoal;
 
+  & br {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
