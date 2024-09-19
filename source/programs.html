@@ -120,7 +120,7 @@
                 </li>
                 <li class="form__list-item">
                   <label class="radio-button">
-                    <input class="visually-hidden radio-button__input" type="radio" name="program" value="not-know" disabled>
+                    <input class="visually-hidden radio-button__input" type="radio" name="program" value="not-know">
                     <span class="radio-button__mark radio-button__mark--radio"></span>
                     <span class="radio-button__label">Не знаю (Нужен ваш совет)</span>
                   </label>
@@ -129,12 +129,12 @@
             </fieldset>
           </div>
           <fieldset class="form__owner-data">
-            <legend class="decorated-title">Контактные данные
+            <legend class="decorated-title decorated-title--longer">Контактные данные
               (владельца кота)</legend>
             <ul class="form__inputs-list">
               <li class="form__list-item">
 
-                <label class="input input__e-mail  input--with-icon input--error" for="e-mail">
+                <label class="input input__e-mail  input--with-icon" for="e-mail">
                   <span class="input__label">E-mail:*
                   </span>
                   <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required></label>
@@ -153,12 +153,12 @@
             </ul>
           </fieldset>
           <fieldset class="form__comment">
-            <legend class="decorated-title">Комментарий</legend>
+            <legend class="decorated-title decorated-title--longer">Комментарий</legend>
             <textarea class="textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
 
           </fieldset>
           <fieldset class="form__choose-additions">
-            <legend class="decorated-title">Дополнительно</legend>
+            <legend class="decorated-title decorated-title--longer">Дополнительно</legend>
             <ul class="form__inputs-list">
               <li class="form__list-item">
                 <label class="checkbox">
@@ -221,14 +221,14 @@
   <footer class="main-footer">
     <div class="container">
       <div class="main-footer__wrap">
-        <a class="logo-text logo-text--underlined" href="#">
+        <a class="main-footer__logo-text logo-text logo-text--underlined" href="#">
           <picture>
-            <source media="(min-width: 1300px)" width="118" height="21" type="image/svg+xml" srcset="images/logo_text_light.svg">
-            <source media="(min-width: 768px)" width="101" height="21" type="image/svg+xml" srcset="images/logo_text_light.svg">
-            <img src="images/logo_text_dark.svg" alt="Логотип компании." width="101" height="21">
+            <source media="(min-width: 1300px)" width="128" height="24" type="image/svg+xml" srcset="images/logo_text_light.svg">
+            <source media="(min-width: 768px)" width="128" height="24" type="image/svg+xml" srcset="images/logo_text_light.svg">
+            <img src="images/logo_text_dark.svg" alt="Логотип компании." width="128" height="24">
           </picture>
         </a>
-        <div class="social">
+        <div class="main-footer__social social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social__list">
             <li class="social__item">

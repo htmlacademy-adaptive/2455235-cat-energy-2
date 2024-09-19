@@ -29,6 +29,11 @@
     }
   }
 
+  &--longer::after {
+    top: calc(0.5em + 3px);
+    left: calc(100% + 20px);
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -43,3 +48,4 @@
     }
   }
 }
+
