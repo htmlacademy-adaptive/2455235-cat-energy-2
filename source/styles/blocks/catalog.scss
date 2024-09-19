@@ -1,9 +1,15 @@
 .catalog {
+  margin-bottom: 25px;
   padding-top: 27px;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 74px;
     padding-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
   }
 }
 
