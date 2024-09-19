@@ -9,10 +9,6 @@
   color: $color-charcoal;
   cursor: pointer;
 
-  &:hover .checkbox__mark {
-    border: 1px solid $color-silver;
-  }
-
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1.5;
@@ -27,10 +23,10 @@
   width: 30px;
   height: 30px;
   border: 1px solid $color-very-light-grey;
-  transition: border 0.3s;
+  transition: border-color 0.3s;
 }
 
-.checkbox__input[type="checkbox"]:checked + .checkbox__mark::before {
+.checkbox__input:checked + .checkbox__mark::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -45,6 +41,13 @@
   background-color: $color-apple;
 }
 
+.checkbox:hover .checkbox__mark {
+  border-color: $color-silver;
+}
+
+.checkbox__input:focus + .checkbox__mark {
+  border-color: $color-black;
+}
 
 .checkbox__input:disabled + .checkbox__mark {
   opacity: 0.3;

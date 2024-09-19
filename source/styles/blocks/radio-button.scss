@@ -9,10 +9,6 @@
   color: $color-charcoal;
   cursor: pointer;
 
-  &:hover .radio-button__mark {
-    border: 1px solid $color-silver;
-  }
-
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: normal;
@@ -27,14 +23,11 @@
   width: 30px;
   height: 30px;
   border: 1px solid $color-very-light-grey;
-  transition: border 0.3s;
-}
-
-.radio-button__input[type="radio"] + .radio-button__mark {
   border-radius: 50%;
+  transition: border-color 0.3s;
 }
 
-.radio-button__input[type="radio"]:checked + .radio-button__mark::before {
+.radio-button__input:checked + .radio-button__mark::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -44,6 +37,14 @@
   height: 13px;
   border-radius: 50%;
   background-color: $color-apple;
+}
+
+.radio-button:hover .radio-button__mark {
+  border-color: $color-silver;
+}
+
+.radio-button__input:focus + .radio-button__mark {
+  border-color: $color-black;
 }
 
 .radio-button__input:disabled + .radio-button__mark {

@@ -24,4 +24,18 @@
 .main-footer__social {
   width: 100%;
   margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.main-footer__copyright {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 37px;
+    justify-self: flex-end;
+  }
 }

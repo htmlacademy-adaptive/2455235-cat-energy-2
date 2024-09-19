@@ -49,6 +49,10 @@
 
 .map__address {
   justify-self: start;
+
+  @media (min-width: $tablet-width) {
+    justify-self: end;
+  }
 }
 
 .map__wrap-image {

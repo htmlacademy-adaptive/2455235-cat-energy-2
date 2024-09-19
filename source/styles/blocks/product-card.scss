@@ -21,6 +21,7 @@
   grid-template-columns: repeat(2, 50%);
   height: 100%;
   grid-template-rows: 1fr auto;
+  row-gap: 14px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr;
@@ -36,7 +37,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 17px;
+  margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     height: 210px;
@@ -60,7 +61,6 @@
 
 .product-card__title {
   margin: 0;
-  margin-bottom: 14px;
   max-width: 76px;
   font-family: $secondary-font;
   font-weight: 400;
@@ -80,7 +80,7 @@
 
 .product-card__info {
   margin: 0;
-  margin-bottom: 17px;
+  margin-bottom: 7px;
   list-style: none;
   font-size: 12px;
   line-height: 1.33;

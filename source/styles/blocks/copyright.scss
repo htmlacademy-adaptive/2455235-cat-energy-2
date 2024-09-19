@@ -1,5 +1,4 @@
 .copyright {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,12 +7,6 @@
   &:has(a:active) .copyright__logo-text,
   &:has(a:active) .copyright__logo-image {
     opacity: 0.3;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 168px;
-    height: 37px;
-    justify-self: flex-end;
   }
 }
 
