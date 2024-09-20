@@ -38,6 +38,10 @@
     mask-position: center;
     mask-size: 100%;
     mask-image: url("../../icons/stack.svg#envelope");
+
+    @media (min-width: $tablet-width) {
+      right: 14px;
+    }
   }
 }
 
@@ -64,7 +68,7 @@
   transition: border 0.3s;
 
   @media (min-width: $tablet-width) {
-    padding: 11px 20px;
+    padding: 10px 20px;
   }
 }
 
@@ -79,5 +83,13 @@
 
   .input__data {
     border: 1px solid $color-light-coral;
+  }
+}
+
+.input--wide .input__data {
+  padding: 13px 14px;
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px;
   }
 }

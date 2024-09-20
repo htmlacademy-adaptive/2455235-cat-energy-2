@@ -32,6 +32,11 @@
   &--longer::after {
     top: calc(0.5em + 3px);
     left: calc(100% + 20px);
+
+    @media (min-width: $tablet-width) {
+      top: calc(0.5em + 5px);
+      left: calc(100% + 40px);
+    }
   }
 
   &::before {
@@ -47,5 +52,10 @@
       right: calc(100% + 40px);
     }
   }
-}
 
+  &--longer::before {
+    @media (min-width: $tablet-width) {
+      top: calc(0.5em + 5px);
+    }
+  }
+}

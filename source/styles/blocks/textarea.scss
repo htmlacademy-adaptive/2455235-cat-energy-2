@@ -23,5 +23,10 @@
     padding: 11px 20px;
     font-size: 20px;
     line-height: 1.5;
+    min-height: 175px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 9px 20px;
   }
 }
