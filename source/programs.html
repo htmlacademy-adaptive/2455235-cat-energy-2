@@ -34,7 +34,7 @@
             <img src="images/logo_text_dark.svg" alt="Логотип название компании." width="101" height="18">
           </picture>
         </a>
-        <!-- Чтобы преобразовать линии бургера в иконку "закрыть", запретить прокрутку контента под меню и открыть меню, добавьте класс main-header__main-nav--is-opened к элементу с классом main-header__main-nav -->
+        <!-- Чтобы преобразовать линии бургера в иконку "закрыть", запретить прокрутку контента под меню и открыть меню, добавьте класс c модификатором is-opened к элементу с классом main-header__main-nav -->
         <nav class="main-header__main-nav main-header__main-nav--nojs">
           <button class="main-header__burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -71,7 +71,7 @@
         <p class="section-form__description">Заполните анкету, и&nbsp;мы&nbsp;подберем <br>
           программу питания для вашего кота</p>
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-          <!-- чтобы сообщить пользователю о том, что введены неверные данные, надо элементу с классом input добавить класс-модификатор input--error -->
+          <!-- чтобы сообщить пользователю о том, что введены неверные данные, надо элементу с классом input добавить класс с модификатором error -->
           <div class="form__top">
             <fieldset class="form__pet-data">
               <legend class="visually-hidden">Введите данные питомца</legend>
@@ -134,7 +134,7 @@
             <ul class="form__inputs-list">
               <li class="form__list-item">
 
-                <label class="input input__e-mail  input--with-icon" for="e-mail">
+                <label class="input input--e-mail  input--with-icon" for="e-mail">
                   <span class="input__label">E-mail:*
                   </span>
                   <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required></label>
@@ -142,7 +142,7 @@
               </li>
               <li class="form__list-item">
 
-                <label class="input input__phone  input--with-icon" for="phone">
+                <label class="input input--phone  input--with-icon" for="phone">
                   <span class="input__label">
                     Телефон:*
                   </span>

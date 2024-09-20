@@ -45,11 +45,11 @@
   }
 }
 
-.input__e-mail.input--with-icon::after {
+.input--e-mail.input--with-icon::after {
   mask-image: url("../../icons/stack.svg#envelope");
 }
 
-.input__phone.input--with-icon::after {
+.input--phone.input--with-icon::after {
   mask-image: url("../../icons/stack.svg#phone");
 }
 
