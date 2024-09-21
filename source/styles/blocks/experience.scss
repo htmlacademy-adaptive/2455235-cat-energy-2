@@ -22,7 +22,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, min-content);
-    justify-content: space-between;
   }
 }
 
@@ -43,10 +42,16 @@
 }
 
 .experience__info {
+  margin: 0;
   margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $color-charcoal;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 55px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   @media (min-width: $desktop-width) {
@@ -61,6 +66,7 @@
     max-width: 950px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 44px;
     display: flex;
     justify-content: space-between;
   }
@@ -93,13 +99,15 @@
 }
 
 .experience__item {
-  min-height: 56px;
-  padding-top: 15px;
+  padding-top: 12px;
   border-radius: 3px;
   border: 1px solid $color-very-light-grey;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+  }
 }
 
 .experience__number {
@@ -107,8 +115,9 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 1;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
   text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -119,14 +128,14 @@
 .experience__description {
   margin: 0 auto;
   width: min-content;
-  padding: 0 11px;
+  padding: 0 16px;
   background-color: $color-whisper-second;
   text-align: center;
   font-size: 12px;
   line-height: 1;
 
   &:last-child {
-    margin-bottom: -12px;
+    margin-bottom: -16px;
   }
 
   @media (min-width: $tablet-width) {
@@ -170,7 +179,7 @@
     grid-column: 1 / 2;
     justify-self: start;
     flex-direction: row;
-    gap: 63px;
+    gap: 65px;
     padding-top: 0;
   }
 }
@@ -183,5 +192,6 @@
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
+    align-self: start;
   }
 }

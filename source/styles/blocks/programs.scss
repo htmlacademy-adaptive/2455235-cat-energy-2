@@ -2,11 +2,11 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 45px;
+    margin-bottom: 46px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 71px;
+    margin-bottom: 41px;
   }
 }
 
@@ -29,214 +29,12 @@
   }
 }
 
-.programs__item {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  grid-template-rows: 50px 1fr min-content;
-  padding: 21px 20px 18px;
-  background-color: $color-white-smoke;
-  gap: 22px 20px;
-
+.programs__list-item {
   &:not(:last-child) {
     margin-bottom: 20px;
-  }
 
-  @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 200px;
-    grid-template-rows: min-content 1fr min-content;
-    gap: 24px 53px;
-    padding: 77px 63px 53px 52px;
-
-    &:not(:last-child) {
+    @media (min-width: $tablet-width) {
       margin-bottom: 30px;
     }
   }
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: min-content 1fr min-content;
-    gap: 24px 62px;
-    padding: 47px 61px 55px 52px;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.programs__image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: $color-apple;
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    width: 200px;
-    height: 200px;
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 100px;
-    height: 100px;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    margin-bottom: 15px;
-  }
-}
-
-.programs__image::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-}
-
-.programs__item--slim .programs__image::after {
-  width: 36px;
-  height: 50px;
-  top: -3px;
-  transform: translateX(-50%);
-  background-image: url("../../icons/stack.svg#cat_slim");
-
-  @media (min-width: $tablet-width) {
-    width: 140px;
-    height: 194px;
-    top: -17px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 70px;
-    height: 97px;
-    top: -9px;
-  }
-}
-
-.programs__item--add-weight .programs__image::after {
-  width: 67px;
-  height: 28px;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url("../../icons/stack.svg#cat_pro");
-
-  @media (min-width: $tablet-width) {
-    width: 268px;
-    height: 112px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 134px;
-    height: 56px;
-    transform: translate(calc(-50% - 4px), -50%);
-  }
-}
-
-.programs__title {
-  margin: 0;
-  align-self: center;
-  text-transform: uppercase;
-  grid-column: 2 / 3;
-  font-family: $secondary-font;
-  font-size: 24px;
-  line-height: 1.54;
-  font-weight: 400;
-
-  @media (min-width: $tablet-width) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    font-size: 36px;
-    line-height: 1;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    margin-bottom: 15px;
-  }
-}
-
-.programs__description {
-  grid-column: 1 / -1;
-  position: relative;
-  margin-bottom: 15px;
-
-  @media (min-width: $tablet-width) {
-    grid-column: 1 / 2;
-    margin-bottom: 24px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column: 1 / -1;
-    margin-bottom: 0;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -22px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: $color-gainsboro;
-
-    @media (min-width: $tablet-width) {
-      content: none;
-    }
-  }
-}
-
-.programs__link {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  grid-column: 1 / -1;
-  font-family: $secondary-font;
-  font-size: 16px;
-  line-height: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: $color-black;
-
-  @media (min-width: $tablet-width) {
-    grid-column: 1 / 2;
-    gap: 25px;
-    font-size: 20px;
-    line-height: normal;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column: 1 / -1;
-  }
-}
-
-.programs__arrow-window {
-  position: relative;
-  width: 32px;
-  height: 12px;
-  overflow: hidden;
-}
-
-.programs__arrow-wrap {
-  width: 32px;
-  height: 12px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateX(-8px) translateY(-50%);
-  background-image: url("../../icons/stack.svg#arrow");
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  transition: transform 0.3s;
-}
-
-.programs__link:hover .programs__arrow-wrap {
-  transform: translateX(0) translateY(-50%);
-}
-
-.programs__link:active {
-  opacity: 0.3;
 }

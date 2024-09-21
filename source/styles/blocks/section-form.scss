@@ -1,21 +1,21 @@
 .section-form {
-  padding: 27px 0 32px;
-  border-top: 1px solid $color-gainsboro;
+  margin-bottom: 32px;
+  padding-top: 27px;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 0 60px;
-    border-top: none;
+    margin-bottom: 60px;
+    padding-top: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 0 79px;
+    margin-bottom: 79px;
   }
 }
 
 .section-form__title {
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 54px;

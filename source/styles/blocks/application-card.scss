@@ -1,0 +1,90 @@
+.application-card {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  align-items: center;
+  counter-increment: item-number 1;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 113px min-content;
+    grid-template-rows: 120px 1fr;
+    gap: 31px 0;
+  }
+}
+
+.application-card__picture {
+  width: 60px;
+  height: 60px;
+  background-color: $color-apple;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    align-self: end;
+  }
+}
+
+.application-card--nutritionally .application-card__picture {
+  background-image: url("../../icons/stack.svg#leaf");
+  background-size: 30px 32px;
+}
+
+.application-card--easy .application-card__picture {
+  background-image: url("../../icons/stack.svg#powder");
+  background-size: 26px 29px;
+}
+
+.application-card--replaceable .application-card__picture {
+  background-image: url("../../icons/stack.svg#fork_knife");
+  background-size: 25px 30px;
+}
+
+.application-card--effectively .application-card__picture {
+  background-image: url("../../icons/stack.svg#clock");
+  background-size: 26px 31px;
+}
+
+.application-card__info {
+  z-index: 2;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $color-charcoal;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    font-size: 16px;
+    line-height: 1.5;
+    align-self: start;
+
+    & br {
+      display: block;
+    }
+  }
+}
+
+.application-card__number {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    align-self: start;
+
+    &::after {
+      content: counter(item-number);
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 1;
+      color: $color-white-smoke;
+    }
+  }
+}

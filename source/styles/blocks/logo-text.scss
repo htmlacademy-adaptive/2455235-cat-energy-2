@@ -1,4 +1,5 @@
 .logo-text {
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +12,7 @@
 
   &--underlined {
     border-bottom: 1px solid $color-whisper;
-    padding-bottom: 20px;
+    padding-bottom: 17px;
 
     @media (min-width: $tablet-width) {
       border-bottom: none;

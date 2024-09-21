@@ -1,4 +1,5 @@
 .input {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -10,12 +11,21 @@
   color: $color-charcoal;
   outline: none;
 
+  &:hover .input__data {
+    border: 1px solid $color-very-light-grey;
+  }
+
+  &:has(.input__data:disabled) {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: normal;
   }
 
-  &--with-icon .input__data::after {
+  &--with-icon::after {
     content: "";
     position: absolute;
     width: 20px;
@@ -23,37 +33,63 @@
     top: 50%;
     transform: translateY(-50%);
     right: 12px;
-    background-color: $color-black;
+    background-color: $color-nero;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 100%;
-  }
-
-  &--with-icon .input__data[type="email"]::after {
     mask-image: url("../../icons/stack.svg#envelope");
-  }
 
-  &--with-icon .input__data[type="tel"]::after {
-    mask-image: url("../../icons/stack.svg#phone");
+    @media (min-width: $tablet-width) {
+      right: 14px;
+    }
   }
 }
 
+.input--e-mail.input--with-icon::after {
+  mask-image: url("../../icons/stack.svg#envelope");
+}
+
+.input--phone.input--with-icon::after {
+  mask-image: url("../../icons/stack.svg#phone");
+}
+
+.input--with-icon:has(.input__data:active):not(.input--error)::after {
+  background-color: $color-apple;
+}
+
 .input__data {
-  position: relative;
   flex-grow: 1;
   min-height: 45px;
-  height: 100%;
-  padding: 14px 14px 13px;
+  padding: 13px 14px;
   border: 1px solid $color-whisper-third;
   font: inherit;
   text-transform: inherit;
   color: inherit;
+  transition: border 0.3s;
 
   @media (min-width: $tablet-width) {
-    padding: 11px 20px;
+    padding: 10px 20px;
   }
 }
 
 .input__data::placeholder {
   color: $color-charcoal;
+}
+
+.input--error {
+  &::after {
+    background-color: $color-light-coral;
+  }
+
+  .input__data {
+    border: 1px solid $color-light-coral;
+  }
+}
+
+.input--wide .input__data {
+  padding: 13px 14px;
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px;
+  }
 }

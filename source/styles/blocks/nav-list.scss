@@ -1,13 +1,17 @@
 .nav-list {
-  margin: 0;
   padding: 0;
   list-style: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
   background-color: $color-white;
   display: flex;
   align-items: center;
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
+    visibility: visible;
+    opacity: 1;
     flex-flow: row wrap;
   }
 
@@ -54,7 +58,7 @@
 .nav-list__link {
   width: fit-content;
   margin: 0 auto;
-  padding: 26px;
+  padding: 22px 22px 23px;
   text-decoration: none;
   color: $color-black;
   font-family: $secondary-font;
@@ -73,13 +77,14 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding: 13px 16px;
+    padding: 15px 17px 11px;
     font-family: $secondary-font;
     font-size: 18px;
     line-height: 1.33;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 15px 16px 11px 18px;
     font-family: $secondary-font;
     font-size: 20px;
     line-height: normal;
@@ -95,7 +100,7 @@
 .nav-list__link--current {
   @media (min-width: $tablet-width) {
     text-decoration-line: underline;
-    text-underline-offset: 8px;
+    text-underline-offset: 12px;
     text-decoration-thickness: 2px;
   }
 }

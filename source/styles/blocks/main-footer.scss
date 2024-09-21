@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 54px 0;
+    padding: 53px 0;
   }
 }
 
@@ -17,5 +17,25 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}
+
+.main-footer__social {
+  width: 100%;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.main-footer__copyright {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 37px;
+    justify-self: flex-end;
   }
 }

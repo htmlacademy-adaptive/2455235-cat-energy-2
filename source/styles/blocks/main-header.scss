@@ -3,6 +3,14 @@
   position: relative;
   z-index: 5;
 
+  &--with-line {
+    border-bottom: 1px solid $color-gainsboro;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+    }
+  }
+
   & .nav-list__link--current {
     @media (min-width: $tablet-width) {
       text-decoration-color: $color-apple;
@@ -65,8 +73,103 @@
 
 .main-header__main-nav {
   @media (min-width: $tablet-width) {
-    margin-left: auto;
+    flex-grow: 1;
   }
+}
+
+.main-header__burger {
+  position: relative;
+  width: 33px;
+  height: 30px;
+  margin: 0;
+  padding: 4px 0 4px 3px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__burger-line {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: $color-black;
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s;
+
+  &--top {
+    transform: translateY(calc(-50% - 8px));
+  }
+
+  &--bottom {
+    transform: translateY(calc(-50% + 8px));
+  }
+}
+
+.main-header__main-nav--is-opened .main-header__burger-line--top {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.main-header__main-nav--is-opened .main-header__burger-line--middle {
+  opacity: 0;
+}
+
+.main-header__main-nav--is-opened .main-header__burger-line--bottom {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+// если у пользователя не подключился js, открываем меню и скрываем кнопку бургера
+
+.main-header__main-nav--nojs .main-header__burger {
+  display: none;
+}
+
+.main-header__main-nav--nojs .nav-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.main-header__nav-list {
+  margin: 0;
+  width: 100vw;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  @media (min-width: $tablet-width) {
+    width: fit-content;
+    position: static;
+    margin-left: auto;
+    margin-right: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 700px;
+    margin-right: 0;
+  }
+}
+
+.main-header__main-nav--is-opened .nav-list {
+  opacity: 1;
+  visibility: visible;
 }
 
 .main-header a {

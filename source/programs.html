@@ -17,10 +17,10 @@
 
 <body class="page__body">
 
-  <header class="main-header">
+  <header class="main-header main-header--with-line">
     <div class="container">
       <div class="main-header__content">
-        <a class="main-header__logo-image logo-image" href="index.html">
+        <a class="main-header__logo-image logo-image" href="#">
           <picture>
             <source media="(min-width: 1300px)" width="70" height="59" type="image/svg+xml" srcset="images/logo_desktop.svg">
             <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logo_tablet.svg">
@@ -34,16 +34,15 @@
             <img src="images/logo_text_dark.svg" alt="Логотип название компании." width="101" height="18">
           </picture>
         </a>
-        <nav class="main-header__main-nav main-nav">
-          <!-- Чтобы преобразовать линии в иконку закрыть добавьте класс is-opened к элементу с классом burger -->
-          <button class="burger" type="button">
+        <!-- Чтобы преобразовать линии бургера в иконку "закрыть", запретить прокрутку контента под меню и открыть меню, добавьте класс c модификатором is-opened к элементу с классом main-header__main-nav -->
+        <nav class="main-header__main-nav main-header__main-nav--nojs">
+          <button class="main-header__burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
-            <span class="burger__line burger__line--top"></span>
-            <span class="burger__line burger__line--middle"></span>
-            <span class="burger__line burger__line--bottom"></span>
+            <span class="main-header__burger-line main-header__burger-line--top"></span>
+            <span class="main-header__burger-line main-header__burger-line--middle"></span>
+            <span class="main-header__burger-line main-header__burger-line--bottom"></span>
           </button>
-          <!-- Чтобы отобразить меню добавьте класс is-opened к элементу с классом nav-list, к элементу page__body добавить класс no-scroll -->
-          <ul class="main-nav__list nav-list">
+          <ul class="main-header__nav-list nav-list">
             <li class="nav-list__item">
               <a class="nav-list__link" href="index.html">
                 Главная
@@ -72,19 +71,31 @@
         <p class="section-form__description">Заполните анкету, и&nbsp;мы&nbsp;подберем <br>
           программу питания для вашего кота</p>
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+          <!-- чтобы сообщить пользователю о том, что введены неверные данные, надо элементу с классом input добавить класс с модификатором error -->
           <div class="form__top">
             <fieldset class="form__pet-data">
               <legend class="visually-hidden">Введите данные питомца</legend>
               <ul class="form__inputs-list">
                 <li class="form__list-item">
-                  <label class="input" for="pet-name">Имя:*<input class="input__data" type="text" id="pet-name" name="pet-name" placeholder="барсик" required></label>
-
+                  <label class="input" for="pet-name">
+                    <span class="input__label">
+                      Имя:*
+                    </span>
+                    <input class="input__data" type="text" id="pet-name" name="pet-name" placeholder="барсик" required></label>
                 </li>
                 <li class="form__list-item">
-                  <label class="input" for="pet-weight">Вес (кг):* <input class="input__data" type="number" min="0" max="30" id="pet-weight" name="pet-weight" placeholder="7" required></label>
+                  <label class="input" for="pet-weight">
+                    <span class="input__label">
+                      Вес (кг):*
+                    </span>
+                    <input class="input__data" type="number" min="0" max="30" id="pet-weight" name="pet-weight" placeholder="7" required></label>
                 </li>
                 <li class="form__list-item">
-                  <label class="input" for="pet-age">Возраст (лет): <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required></label>
+                  <label class="input" for="pet-age">
+                    <span class="input__label">
+                      Возраст (лет):
+                    </span>
+                    <input class="input__data" type="number" min="0" max="30" id="pet-age" name="pet-age" placeholder="7" required></label>
 
                 </li>
               </ul>
@@ -109,7 +120,7 @@
                 </li>
                 <li class="form__list-item">
                   <label class="radio-button">
-                    <input class="visually-hidden radio-button__input" type="radio" name="program" value="not-know" disabled>
+                    <input class="visually-hidden radio-button__input" type="radio" name="program" value="not-know">
                     <span class="radio-button__mark radio-button__mark--radio"></span>
                     <span class="radio-button__label">Не знаю (Нужен ваш совет)</span>
                   </label>
@@ -118,29 +129,36 @@
             </fieldset>
           </div>
           <fieldset class="form__owner-data">
-            <legend class="decorated-title">Контактные данные
+            <legend class="form__field-title decorated-title decorated-title--longer">Контактные данные
               (владельца кота)</legend>
             <ul class="form__inputs-list">
               <li class="form__list-item">
 
-                <label class="input input--with-icon" for="e-mail">E-mail:* <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required></label>
+                <label class="input input--e-mail  input--with-icon" for="e-mail">
+                  <span class="input__label">E-mail:*
+                  </span>
+                  <input class="input__data" type="email" id="e-mail" name="pet-name" placeholder="kuklachev@gmail.com" required></label>
 
               </li>
               <li class="form__list-item">
 
-                <label class="input input--with-icon" for="phone">Телефон:* <input class="input__data" type="tel" id="phone" name="pet-weight" placeholder="8 (960) 900-60-90" required></label>
+                <label class="input input--phone  input--with-icon" for="phone">
+                  <span class="input__label">
+                    Телефон:*
+                  </span>
+                  <input class="input__data" type="tel" id="phone" name="pet-weight" placeholder="8 (960) 900-60-90" required></label>
 
               </li>
 
             </ul>
           </fieldset>
           <fieldset class="form__comment">
-            <legend class="decorated-title">Комментарий</legend>
-            <textarea class="textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <legend class="form__field-title decorated-title decorated-title--longer">Комментарий</legend>
+            <textarea class="textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота" rows="5" cols="15"></textarea>
 
           </fieldset>
           <fieldset class="form__choose-additions">
-            <legend class="decorated-title">Дополнительно</legend>
+            <legend class="form__field-title decorated-title decorated-title--longer">Дополнительно</legend>
             <ul class="form__inputs-list">
               <li class="form__list-item">
                 <label class="checkbox">
@@ -180,7 +198,7 @@
       </div>
     </section>
 
-    <section class="map map--dark-background">
+    <section class="map">
       <div class="container">
         <h2 class="visually-hidden">Карта</h2>
         <div class="map__content">
@@ -192,25 +210,29 @@
           </address>
         </div>
       </div>
-      <picture>
-        <source media="(min-width: 1300px)" width="1300" height="400" type="image/png" srcset="images/map_desktop@1x.png 1x, images/map_desktop@2x.png 2x">
-        <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="images/map_tablet@1x.png 1x, images/map_tablet@2x.png 2x">
-        <img class="map__image" src="images/map_mobile@1x.png" srcset="images/map_mobile@2x.png 2x" alt="Карта с указанием местонахождения фирмы" width="320" height="362">
-      </picture>
-
+      <div class="map__wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037910141404!2d30.318433985137435!3d59.9387164194755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1726408599198!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"></iframe>
+        <div class="map__wrap-image">
+          <picture>
+            <source media="(min-width: 1300px)" width="1300" height="400" type="image/png" srcset="images/map_desktop@1x.png 1x, images/map_desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="images/map_tablet@1x.png 1x, images/map_tablet@2x.png 2x">
+            <img class="map__image" src="images/map_mobile@1x.png" srcset="images/map_mobile@2x.png 2x" alt="Карта с указанием местонахождения фирмы" width="320" height="362">
+          </picture>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="container">
       <div class="main-footer__wrap">
-        <a class="logo-text logo-text--underlined" href="#">
+        <a class="main-footer__logo-text logo-text logo-text--underlined" href="#">
           <picture>
-            <source media="(min-width: 1300px)" width="118" height="21" type="image/svg+xml" srcset="images/logo_text_light.svg">
-            <source media="(min-width: 768px)" width="101" height="18" type="image/svg+xml" srcset="images/logo_text_light.svg">
-            <img src="images/logo_text_dark.svg" alt="Логотип компании." width="101" height="18">
+            <source media="(min-width: 1300px)" width="128" height="24" type="image/svg+xml" srcset="images/logo_text_light.svg">
+            <source media="(min-width: 768px)" width="128" height="24" type="image/svg+xml" srcset="images/logo_text_light.svg">
+            <img src="images/logo_text_dark.svg" alt="Логотип компании." width="128" height="24">
           </picture>
         </a>
-        <div class="social">
+        <div class="main-footer__social social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social__list">
             <li class="social__item">
@@ -239,7 +261,7 @@
             </li>
           </ul>
         </div>
-        <div class="copyright">
+        <div class="main-footer__copyright copyright">
           <a class="copyright__logo-text" href="https://htmlacademy.ru" target="_blank" rel="noreferrer noopener">HTML Academy</a>
           <a class="copyright__logo-image" href="https://htmlacademy.ru" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Логотип разработчика сайта</span>

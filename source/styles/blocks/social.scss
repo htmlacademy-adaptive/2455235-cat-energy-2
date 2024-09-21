@@ -1,13 +1,10 @@
 .social {
-  width: 100%;
-  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid $color-whisper;
   color: $color-dim-gray;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
     border-bottom: none;
   }
 }
@@ -18,13 +15,14 @@
   list-style: none;
   display: flex;
   align-items: center;
+  gap: 4px;
   flex-wrap: wrap;
   max-width: 210px;
 }
 
 .social__link {
   display: block;
-  padding: 20px 12px;
+  padding: 20px 10px;
   transition: color 0.3s, opacity 0.3s;
   text-decoration: none;
   color: inherit;
