@@ -36,5 +36,13 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 30px;
     }
+
+    @media (min-width: $descktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $descktop-width) {
+    margin-bottom: 30px;
   }
 }

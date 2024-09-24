@@ -74,6 +74,8 @@
 .main-header__main-nav {
   @media (min-width: $tablet-width) {
     flex-grow: 1;
+    max-width: 500px;
+    margin-left: auto;
   }
 }
 

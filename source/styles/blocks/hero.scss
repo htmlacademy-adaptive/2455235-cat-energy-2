@@ -52,12 +52,14 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
+    max-width: 450px;
   }
 }
 
 .hero__content {
-  max-width: 280px;
+  min-width: 280px;
   margin: 0 auto;
+  min-height: 453px;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -93,6 +95,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
+    max-width: 450px;
     margin-bottom: 52px;
   }
 }
