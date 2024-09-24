@@ -9,7 +9,7 @@
       url("../../images/hero_mobile_background@1x.jpg") type("image/jpeg") 1x,
       url("../../images/hero_mobile_background@2x.jpg") type("image/jpeg") 2x
     ),
-    linear-gradient(to bottom, #62a63a 302px, transparent 302px);
+    linear-gradient(to top, transparent 178px, #62a63a 178px);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 320px 302px, 100% 100%;
@@ -81,10 +81,12 @@
   font-family: $secondary-font;
   font-size: 14px;
   line-height: 1;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 50px;
     margin-left: 90px;
+    text-align: left;
     font-size: 20px;
     font-family: $secondary-font;
   }
