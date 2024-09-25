@@ -6,15 +6,17 @@
 
   &--with-line {
     border-bottom: 1px solid $color-gainsboro;
-
-    @media (min-width: $tablet-width) {
-      border-bottom: none;
-    }
   }
 
   & .nav-list__link--current {
     @media (min-width: $tablet-width) {
       text-decoration-color: $color-apple;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--with-line {
+      border-bottom: none;
     }
   }
 
@@ -99,6 +101,10 @@
     opacity: 0.3;
   }
 
+  .main-header__main-nav--nojs & {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
@@ -119,30 +125,28 @@
 
   &--top {
     transform: translateY(calc(-50% - 8px));
+
+    .main-header__main-nav--is-opened & {
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &--middle {
+    .main-header__main-nav--is-opened & {
+      opacity: 0;
+    }
   }
 
   &--bottom {
     transform: translateY(calc(-50% + 8px));
+
+    .main-header__main-nav--is-opened & {
+      transform: translateY(-50%) rotate(-45deg);
+    }
   }
 }
 
-.main-header__main-nav--is-opened .main-header__burger-line--top {
-  transform: translateY(-50%) rotate(45deg);
-}
-
-.main-header__main-nav--is-opened .main-header__burger-line--middle {
-  opacity: 0;
-}
-
-.main-header__main-nav--is-opened .main-header__burger-line--bottom {
-  transform: translateY(-50%) rotate(-45deg);
-}
-
 // если у пользователя не подключился js, открываем меню и скрываем кнопку бургера
-
-.main-header__main-nav--nojs .main-header__burger {
-  display: none;
-}
 
 .main-header__main-nav--nojs .nav-list {
   opacity: 1;
@@ -156,19 +160,19 @@
   position: absolute;
   top: 100%;
   left: 0;
-  height: calc(100vh - var(--header-height));
+  height: auto;
+  max-height: calc(100vh - var(--header-height));
   overflow-y: auto;
 
   @media (min-width: $tablet-width) {
     width: fit-content;
-    height: auto;
     position: static;
     margin-left: auto;
     margin-right: 4px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 700px;
+    max-width: 600px;
     margin-right: 0;
   }
 }

@@ -6,20 +6,18 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
+
+    &--narrow {
+      max-width: 1000px;
+      padding: 0 70px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 40px;
-  }
 
-  &--narrow {
-    @media (min-width: $tablet-width) {
-      max-width: 1000px;
-      padding: 0 70px;
-    }
-
-    @media (min-width: $desktop-width) {
-      max-width: 100%;
+    &--narrow {
+      max-width: $desktop-width;
       padding: 0 40px;
     }
   }

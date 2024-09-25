@@ -20,11 +20,6 @@
     pointer-events: none;
   }
 
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: normal;
-  }
-
   &--with-icon::after {
     content: "";
     position: absolute;
@@ -38,8 +33,17 @@
     mask-position: center;
     mask-size: 100%;
     mask-image: url("../../icons/stack.svg#envelope");
+  }
 
-    @media (min-width: $tablet-width) {
+  &--error::after {
+    background-color: $color-light-coral;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+
+    &--with-icon::after {
       right: 14px;
     }
   }
@@ -67,29 +71,27 @@
   color: inherit;
   transition: border 0.3s;
 
-  @media (min-width: $tablet-width) {
-    padding: 10px 20px;
-  }
-}
-
-.input__data::placeholder {
-  color: $color-charcoal;
-}
-
-.input--error {
-  &::after {
-    background-color: $color-light-coral;
+  .input--with-icon & {
+    padding-right: 37px;
   }
 
-  .input__data {
+  .input--wide & {
+    padding: 13px 14px;
+  }
+
+  .input--error & {
     border: 1px solid $color-light-coral;
   }
-}
 
-.input--wide .input__data {
-  padding: 13px 14px;
+  &::placeholder {
+    color: $color-charcoal;
+  }
 
   @media (min-width: $tablet-width) {
-    padding: 11px 20px;
+    padding: 10px 20px;
+
+    .input--wide & {
+      padding: 11px 12px;
+    }
   }
 }

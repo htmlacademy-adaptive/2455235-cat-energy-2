@@ -12,6 +12,10 @@
   &:has(a:hover) .copyright__logo-image {
     color: $color-apple;
   }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
 }
 
 .copyright__logo-text {
@@ -32,6 +36,7 @@
 }
 
 .copyright__logo-image {
+  flex-shrink: 0;
   color: inherit;
   transition: opacity 0.3s, color 0.3s;
 }

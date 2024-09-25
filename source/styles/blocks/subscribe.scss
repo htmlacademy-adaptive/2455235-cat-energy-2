@@ -79,11 +79,7 @@
 }
 
 .subscribe__input .input__data {
-  padding: 13px 12px;
-
-  @media (min-width: $tablet-width) {
-    padding: 12px;
-  }
+  height: 100%;
 }
 
 .subscribe__button {

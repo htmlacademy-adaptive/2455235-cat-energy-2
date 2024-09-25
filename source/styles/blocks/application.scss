@@ -5,10 +5,8 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 47px;
-  }
 
-  &::after {
-    @media (min-width: $tablet-width) {
+    &::after {
       content: "";
       position: absolute;
       width: 100%;
@@ -16,14 +14,14 @@
       bottom: -47px;
       background-color: $color-whisper;
     }
-
-    @media (min-width: $desktop-width) {
-      content: none;
-    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 69px;
+
+    &::after {
+      content: none;
+    }
   }
 }
 

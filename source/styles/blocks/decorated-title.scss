@@ -7,14 +7,6 @@
   font-weight: 400;
   line-height: 1;
 
-  @media (min-width: $tablet-width) {
-    font-size: 32px;
-  }
-
-  @media (min-width: $desktop-width) {
-    font-size: 40px;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -23,20 +15,6 @@
     width: 100vw;
     height: 2px;
     background-color: $color-apple;
-
-    @media (min-width: $tablet-width) {
-      left: calc(100% + 40px);
-    }
-  }
-
-  &--longer::after {
-    top: calc(0.5em + 3px);
-    left: calc(100% + 20px);
-
-    @media (min-width: $tablet-width) {
-      top: calc(0.5em + 5px);
-      left: calc(100% + 40px);
-    }
   }
 
   &::before {
@@ -47,15 +25,35 @@
     width: 100vw;
     height: 2px;
     background-color: $color-apple;
+  }
 
-    @media (min-width: $tablet-width) {
+  &--longer::after {
+    top: calc(0.5em + 3px);
+    left: calc(100% + 20px);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+
+    &::after {
+      left: calc(100% + 40px);
+    }
+
+    &::before {
       right: calc(100% + 40px);
+    }
+
+    &--longer::after {
+      top: calc(0.5em + 5px);
+      left: calc(100% + 40px);
+    }
+
+    &--longer::before {
+      top: calc(0.5em + 5px);
     }
   }
 
-  &--longer::before {
-    @media (min-width: $tablet-width) {
-      top: calc(0.5em + 5px);
-    }
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
   }
 }

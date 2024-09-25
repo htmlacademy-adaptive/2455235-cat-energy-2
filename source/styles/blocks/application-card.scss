@@ -15,35 +15,36 @@
 .application-card__picture {
   width: 60px;
   height: 60px;
+  align-self: start;
   background-color: $color-apple;
   background-repeat: no-repeat;
   background-position: center;
+
+  .application-card--nutritionally & {
+    background-image: url("../../icons/stack.svg#leaf");
+    background-size: 30px 32px;
+  }
+
+  .application-card--easy & {
+    background-image: url("../../icons/stack.svg#powder");
+    background-size: 26px 29px;
+  }
+
+  .application-card--replaceable & {
+    background-image: url("../../icons/stack.svg#fork_knife");
+    background-size: 25px 30px;
+  }
+
+  .application-card--effectively & {
+    background-image: url("../../icons/stack.svg#clock");
+    background-size: 26px 31px;
+  }
 
   @media (min-width: $tablet-width) {
     width: 80px;
     height: 80px;
     align-self: end;
   }
-}
-
-.application-card--nutritionally .application-card__picture {
-  background-image: url("../../icons/stack.svg#leaf");
-  background-size: 30px 32px;
-}
-
-.application-card--easy .application-card__picture {
-  background-image: url("../../icons/stack.svg#powder");
-  background-size: 26px 29px;
-}
-
-.application-card--replaceable .application-card__picture {
-  background-image: url("../../icons/stack.svg#fork_knife");
-  background-size: 25px 30px;
-}
-
-.application-card--effectively .application-card__picture {
-  background-image: url("../../icons/stack.svg#clock");
-  background-size: 26px 31px;
 }
 
 .application-card__info {

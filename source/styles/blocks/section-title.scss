@@ -5,13 +5,13 @@
   font-weight: 400;
   line-height: 1;
 
-  @media (min-width: $tablet-width) {
-    font-family: $secondary-font;
-    font-size: 60px;
+  &--dark {
     color: $color-black;
   }
 
-  &--dark {
+  @media (min-width: $tablet-width) {
+    font-family: $secondary-font;
+    font-size: 60px;
     color: $color-black;
   }
 }

@@ -3,9 +3,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
-  }
-
-  @media (min-width: $desktop-width) {
     margin-bottom: 70px;
   }
 }
@@ -26,16 +23,6 @@
   padding-bottom: 24px;
   border: none;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 72px;
-    padding-bottom: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 0;
-  }
-
-
   &::after {
     content: "";
     background-color: $color-whisper;
@@ -44,12 +31,22 @@
     position: absolute;
     bottom: 0;
     left: calc(50% - 50vw);
+  }
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+    padding-bottom: 0;
+
+    &::after {
       content: none;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
+
 
 .form__pet-data .form__list-item:not(:last-child) {
   margin-bottom: 12px;
@@ -73,17 +70,6 @@
   padding-bottom: 19px;
   border: none;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 62px;
-    padding: 21px 26px 27px;
-    border: 1px solid $color-whisper-third;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 0;
-    padding: 23px 27px;
-  }
-
   &::after {
     content: "";
     background-color: $color-whisper;
@@ -92,10 +78,21 @@
     position: absolute;
     bottom: 0;
     left: calc(50% - 50vw);
+  }
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 62px;
+    padding: 21px 26px 27px;
+    border: 1px solid $color-whisper-third;
+
+    &::after {
       content: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding: 23px 27px;
   }
 }
 
@@ -124,9 +121,17 @@
 
 .form__owner-data .form__inputs-list {
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.form__owner-data .form__list-item {
+  @media (min-width: $desktop-width) {
+    width: calc(50% - 40px);
   }
 }
 

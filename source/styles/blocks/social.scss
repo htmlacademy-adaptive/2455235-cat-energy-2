@@ -26,6 +26,7 @@
   transition: color 0.3s, opacity 0.3s;
   text-decoration: none;
   color: inherit;
+  flex-shrink: 0;
 
   &:hover {
     color: $color-apple;

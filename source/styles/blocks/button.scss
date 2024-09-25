@@ -23,12 +23,6 @@
     opacity: 0.3;
   }
 
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 1.3;
-  }
-
   &--dim {
     color: $color-charcoal;
     background-color: $color-white-smoke;
@@ -36,5 +30,10 @@
     &:hover {
       background-color: $color-whisper;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.3;
   }
 }
