@@ -2,6 +2,7 @@
 .main-header {
   position: relative;
   z-index: 5;
+  --header-height: 65px;
 
   &--with-line {
     border-bottom: 1px solid $color-gainsboro;
@@ -74,6 +75,8 @@
 .main-header__main-nav {
   @media (min-width: $tablet-width) {
     flex-grow: 1;
+    max-width: 500px;
+    margin-left: auto;
   }
 }
 
@@ -153,9 +156,12 @@
   position: absolute;
   top: 100%;
   left: 0;
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
 
   @media (min-width: $tablet-width) {
     width: fit-content;
+    height: auto;
     position: static;
     margin-left: auto;
     margin-right: 4px;
