@@ -63,6 +63,10 @@
 
 .input__label {
   max-width: 75px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 150px;
+  }
 }
 
 .input__data {
