@@ -1,0 +1,42 @@
+.social {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid $color-whisper;
+  color: $color-dim-gray;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  max-width: 210px;
+}
+
+.social__link {
+  display: block;
+  padding: 20px 10px;
+  transition: color 0.3s, opacity 0.3s;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+
+  &:hover {
+    color: $color-apple;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__link svg {
+  display: block;
+}

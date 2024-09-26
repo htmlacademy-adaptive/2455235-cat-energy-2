@@ -1,1 +1,29 @@
 /* здесь используйте глобальные переменные */
+
+// Цвета
+$color-white: #ffffff;
+$color-black: #000000;
+$color-special-black: #111111;
+$color-apple: #68b738;
+$color-limeade: #5eaa2f;
+$color-white-smoke: #f2f2f2;
+$color-nero: #222222;
+$color-charcoal: #444444;
+$color-gainsboro: #d9d9d9;
+$color-whisper: #e6e6e6;
+$color-whisper-second: #ebebeb;
+$color-whisper-third: #e7e7e7;
+$color-very-light-grey: #cdcdcd;
+$color-dim-gray: #666666;
+$color-light-grey: #d3d3d3;
+$color-light-coral: #ff8282;
+$color-silver: #bababa;
+
+// Размеры вьюпортов
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1300px;
+
+// Шрифты
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial", sans-serif;

@@ -1,0 +1,105 @@
+.input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: $color-charcoal;
+  outline: none;
+
+  &:hover .input__data {
+    border: 1px solid $color-very-light-grey;
+  }
+
+  &:has(.input__data:disabled) {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &--with-icon::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    background-color: $color-nero;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    mask-image: url("../../icons/stack.svg#envelope");
+  }
+
+  &--error::after {
+    background-color: $color-light-coral;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+
+    &--with-icon::after {
+      right: 14px;
+    }
+  }
+}
+
+.input--e-mail.input--with-icon::after {
+  mask-image: url("../../icons/stack.svg#envelope");
+}
+
+.input--phone.input--with-icon::after {
+  mask-image: url("../../icons/stack.svg#phone");
+}
+
+.input--with-icon:has(.input__data:active):not(.input--error)::after {
+  background-color: $color-apple;
+}
+
+.input__label {
+  max-width: 75px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 150px;
+  }
+}
+
+.input__data {
+  flex-grow: 1;
+  min-height: 45px;
+  padding: 13px 14px;
+  border: 1px solid $color-whisper-third;
+  font: inherit;
+  text-transform: inherit;
+  color: inherit;
+  transition: border 0.3s;
+
+  .input--with-icon & {
+    padding-right: 37px;
+  }
+
+  .input--wide & {
+    padding: 13px 14px;
+  }
+
+  .input--error & {
+    border: 1px solid $color-light-coral;
+  }
+
+  &::placeholder {
+    color: $color-charcoal;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 20px;
+
+    .input--wide & {
+      padding: 11px 12px;
+    }
+  }
+}

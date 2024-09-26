@@ -1,0 +1,46 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $color-charcoal;
+
+  &:has(a:active) .copyright__logo-text,
+  &:has(a:active) .copyright__logo-image {
+    opacity: 0.3;
+  }
+
+  &:has(a:hover) .copyright__logo-image {
+    color: $color-apple;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.copyright__logo-text {
+  padding: 8px 23px 8px 0;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $color-dim-gray;
+  transition: opacity 0.3s;
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 22px 8px 6px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__logo-image {
+  flex-shrink: 0;
+  color: inherit;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.copyright__logo-image svg {
+  display: block;
+}

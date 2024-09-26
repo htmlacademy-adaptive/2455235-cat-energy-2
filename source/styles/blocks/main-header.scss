@@ -1,0 +1,188 @@
+
+.main-header {
+  position: relative;
+  z-index: 5;
+  --header-height: 65px;
+
+  &--with-line {
+    border-bottom: 1px solid $color-gainsboro;
+  }
+
+  & .nav-list__link--current {
+    @media (min-width: $tablet-width) {
+      text-decoration-color: $color-apple;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--with-line {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--on-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      color: $color-white;
+
+      & .nav-list__link--current {
+        text-decoration-color: $color-white;
+      }
+    }
+  }
+}
+
+.main-header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 13px;
+  padding-bottom: 14px;
+
+  &:has(a:hover) .logo-image,
+  &:has(a:hover) .logo-text {
+    opacity: 0.8;
+  }
+
+  &:has(a:active) .logo-image,
+  &:has(a:active) .logo-text {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+    padding-bottom: 34px;
+  }
+}
+
+.main-header__logo-image {
+  @media (min-width: $tablet-width) {
+    margin-right: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 14px;
+  }
+}
+
+.main-header__main-nav {
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    max-width: 500px;
+    margin-left: auto;
+  }
+}
+
+.main-header__burger {
+  position: relative;
+  width: 33px;
+  height: 30px;
+  margin: 0;
+  padding: 4px 0 4px 3px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  .main-header__main-nav--nojs & {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__burger-line {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: $color-black;
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s;
+
+  &--top {
+    transform: translateY(calc(-50% - 8px));
+
+    .main-header__main-nav--is-opened & {
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &--middle {
+    .main-header__main-nav--is-opened & {
+      opacity: 0;
+    }
+  }
+
+  &--bottom {
+    transform: translateY(calc(-50% + 8px));
+
+    .main-header__main-nav--is-opened & {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}
+
+// если у пользователя не подключился js, открываем меню и скрываем кнопку бургера
+
+.main-header__main-nav--nojs .nav-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.main-header__nav-list {
+  margin: 0;
+  width: 100vw;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: auto;
+  max-height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+
+  @media (min-width: $tablet-width) {
+    width: fit-content;
+    position: static;
+    margin-left: auto;
+    margin-right: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 600px;
+    margin-right: 0;
+  }
+}
+
+.main-header__main-nav--is-opened .nav-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-header a {
+  display: block;
+  color: inherit;
+}

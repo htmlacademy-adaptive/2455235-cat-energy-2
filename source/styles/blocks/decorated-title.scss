@@ -1,0 +1,59 @@
+.decorated-title {
+  position: relative;
+  width: max-content;
+  margin: 0;
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(0.5em - 2px);
+    left: calc(100% + 40px);
+    width: 100vw;
+    height: 2px;
+    background-color: $color-apple;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(0.5em - 2px);
+    right: calc(100% + 20px);
+    width: 100vw;
+    height: 2px;
+    background-color: $color-apple;
+  }
+
+  &--longer::after {
+    top: calc(0.5em + 3px);
+    left: calc(100% + 20px);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+
+    &::after {
+      left: calc(100% + 40px);
+    }
+
+    &::before {
+      right: calc(100% + 40px);
+    }
+
+    &--longer::after {
+      top: calc(0.5em + 5px);
+      left: calc(100% + 40px);
+    }
+
+    &--longer::before {
+      top: calc(0.5em + 5px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+  }
+}

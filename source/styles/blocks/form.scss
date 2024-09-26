@@ -1,0 +1,273 @@
+.form__top {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+    margin-bottom: 70px;
+  }
+}
+
+.form__field-title {
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 1;
+  }
+}
+
+.form__pet-data {
+  position: relative;
+  margin: 0;
+  margin-bottom: 22px;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 24px;
+  border: none;
+
+  &::after {
+    content: "";
+    background-color: $color-whisper;
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50vw);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+    padding-bottom: 0;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+
+.form__pet-data .form__list-item:not(:last-child) {
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__inputs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form__choose-program {
+  position: relative;
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+  padding-bottom: 19px;
+  border: none;
+
+  &::after {
+    content: "";
+    background-color: $color-whisper;
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50vw);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 62px;
+    padding: 21px 26px 27px;
+    border: 1px solid $color-whisper-third;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding: 23px 27px;
+  }
+}
+
+.form__choose-program .form__list-item:not(:last-child) {
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 11px;
+  }
+}
+
+.form__owner-data {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.form__owner-data .form__inputs-list {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.form__owner-data .form__list-item {
+  @media (min-width: $desktop-width) {
+    width: calc(50% - 40px);
+  }
+}
+
+.form__owner-data .form__list-item:not(:last-child) {
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__owner-data .decorated-title {
+  max-width: 187px;
+  margin-bottom: 35px;
+  padding: 0;
+  line-height: 1.08;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    margin-bottom: 73px;
+  }
+}
+
+.form__comment {
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.form__comment .decorated-title {
+  margin-bottom: 38px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 78px;
+  }
+}
+
+.form__choose-additions {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
+  }
+}
+
+.form__choose-additions .decorated-title {
+  margin-bottom: 36px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.form__choose-additions .form__inputs-list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.form__choose-additions .form__list-item:not(:last-child) {
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__bottom {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+  }
+}
+
+.form__button {
+  max-width: 550px;
+  margin: 0 auto 21px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    min-height: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+  }
+}
+
+.form__remark {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.14;
+
+  @media (min-width: $tablet-width) {
+    justify-self: start;
+    padding-top: 17px;
+    font-size: 16px;
+    line-height: 1;
+  }
+}

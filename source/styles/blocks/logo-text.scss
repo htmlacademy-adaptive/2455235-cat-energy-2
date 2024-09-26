@@ -1,0 +1,34 @@
+.logo-text {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--underlined {
+    border-bottom: 1px solid $color-whisper;
+    padding-bottom: 17px;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+
+    &--underlined {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.logo-text img {
+  display: block;
+}

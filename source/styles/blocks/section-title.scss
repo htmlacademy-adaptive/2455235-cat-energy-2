@@ -1,0 +1,17 @@
+.section-title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  color: $color-white;
+  font-weight: 400;
+  line-height: 1;
+
+  &--dark {
+    color: $color-black;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-family: $secondary-font;
+    font-size: 60px;
+    color: $color-black;
+  }
+}

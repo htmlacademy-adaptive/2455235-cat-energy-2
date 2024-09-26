@@ -1,0 +1,42 @@
+.section-form {
+  margin-bottom: 32px;
+  padding-top: 27px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+    padding-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 79px;
+  }
+}
+
+.section-form__title {
+  margin: 0;
+  margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.section-form__description {
+  margin: 0;
+  margin-bottom: 39px;
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 1.29;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,32 @@
+.textarea {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  padding: 14px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: $color-charcoal;
+  border: 1px solid $color-whisper-third;
+  transition: border 0.3s;
+
+  &:hover {
+    border: 1px solid $color-very-light-grey;
+  }
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    min-height: 175px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 9px 20px;
+  }
+}
