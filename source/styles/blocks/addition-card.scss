@@ -60,6 +60,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: 5fr 1fr;
     justify-content: flex-end;
     line-height: 1.25;
   }
@@ -68,6 +69,10 @@
 .addition-card__info dd {
   margin: 0;
   justify-self: end;
+
+  @media (min-width: $desktop-width) {
+    justify-self: start;
+  }
 }
 
 .addition-card__info dt {
