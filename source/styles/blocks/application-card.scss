@@ -9,6 +9,16 @@
     grid-template-columns: 113px min-content;
     grid-template-rows: 120px 1fr;
     gap: 31px 0;
+
+    &::after {
+      content: counter(item-number);
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 1;
+      color: $color-white-smoke;
+      grid-column: 2 / 3;
+      grid-row: 1 / -1;
+    }
   }
 }
 
@@ -67,25 +77,6 @@
 
     & br {
       display: block;
-    }
-  }
-}
-
-.application-card__number {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
-    align-self: start;
-
-    &::after {
-      content: counter(item-number);
-      font-family: $secondary-font;
-      font-size: 280px;
-      line-height: 1;
-      color: $color-white-smoke;
     }
   }
 }
