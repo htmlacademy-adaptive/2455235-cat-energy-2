@@ -18,7 +18,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header--with-line">
+  <header class="main-header main-header--with-line  main-header--nojs">
     <div class="container">
       <div class="main-header__content">
         <a class="main-header__logo-image logo-image" href="#">
@@ -28,7 +28,7 @@
             <img src="images/logo_mobile.svg" alt="Логотип компании." width="33" height="38">
           </picture>
         </a>
-        <a class="logo-text" href="#">
+        <a class="main-header__logo-text logo-text" href="#">
           <picture>
             <source media="(min-width: 1300px)" width="118" height="21" type="image/svg+xml" srcset="images/logo_text_light.svg">
             <source media="(min-width: 768px)" width="101" height="18" type="image/svg+xml" srcset="images/logo_text_light.svg">
@@ -36,7 +36,7 @@
           </picture>
         </a>
         <!-- Чтобы преобразовать линии бургера в иконку "закрыть", запретить прокрутку контента под меню и открыть меню, добавьте класс с модификатором is-opened к элементу с классом main-header__main-nav -->
-        <nav class="main-header__main-nav main-header__main-nav--nojs">
+        <nav class="main-header__main-nav">
           <button class="main-header__burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
             <span class="main-header__burger-line main-header__burger-line--top"></span>

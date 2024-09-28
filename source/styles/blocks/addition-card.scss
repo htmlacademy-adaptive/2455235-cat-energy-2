@@ -60,7 +60,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 1fr 42px;
     justify-content: flex-end;
     line-height: 1.25;
   }
