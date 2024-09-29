@@ -21,7 +21,8 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, min-content);
+    grid-template-rows: repeat(3, auto);
+    row-gap: 21px;
   }
 }
 
@@ -37,7 +38,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 146px;
+    margin-bottom: 88px;
   }
 }
 
@@ -57,7 +58,7 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     width: 433px;
-    margin-bottom: 69px;
+    margin-bottom: 12px;
   }
 }
 
@@ -93,6 +94,10 @@
     margin: 0;
     flex-shrink: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 41px;
+  }
 }
 
 .experience__item {
@@ -127,7 +132,7 @@
   margin: 0 auto;
   width: min-content;
   padding: 0 16px;
-  background-color: $color-whisper-second;
+  background-color: $color-whisper-forth;
   text-align: center;
   font-size: 12px;
   line-height: 1;
@@ -149,7 +154,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $color-whisper-second;
+    background-color: $color-white-smoke;
   }
 }
 

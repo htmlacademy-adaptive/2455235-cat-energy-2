@@ -27,7 +27,7 @@
 
   &--slim::after {
     left: 27px;
-    top: 21px;
+    top: 19px;
     width: 36px;
     height: 53px;
     background-image: url("../../icons/stack.svg#cat_slim");
@@ -35,7 +35,7 @@
 
   &--add-weight::after {
     top: 35px;
-    left: 13px;
+    left: 12px;
     width: 67px;
     height: 28px;
     background-image: url("../../icons/stack.svg#cat_pro");
@@ -58,14 +58,14 @@
     &--slim::after {
       left: unset;
       right: 93px;
-      top: 81px;
+      top: 82px;
       width: 140px;
       height: 194px;
     }
 
     &--add-weight::after {
       left: unset;
-      top: 135px;
+      top: 136px;
       right: 29px;
       width: 268px;
       height: 112px;
@@ -162,7 +162,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 17px;
+    padding-top: 18px;
     grid-column: 1 / -1;
     margin-bottom: 0;
   }
