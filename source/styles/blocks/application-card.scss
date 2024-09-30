@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 60px 1fr;
   gap: 20px;
+  height: 100%;
   align-items: center;
   counter-increment: item-number 1;
 
@@ -49,12 +50,13 @@
 
     &::after {
       content: counter(item-number);
+      grid-column: 2 / 3;
+      grid-row: 1 / -1;
+      align-self: end;
       font-family: $secondary-font;
       font-size: 280px;
       line-height: 1;
       color: $color-white-smoke;
-      grid-column: 2 / 3;
-      grid-row: 1 / -1;
     }
   }
 }
