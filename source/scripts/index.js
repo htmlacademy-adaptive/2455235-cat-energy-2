@@ -3,8 +3,9 @@
 //Открытие и закрытие меню
 const burgerEl = document.querySelector('.main-header__burger');
 const mainNav = document.querySelector('.main-header__main-nav');
+const mainHeaderEl = document.querySelector('.main-header');
 
-mainNav.classList.remove('main-header__main-nav--nojs');
+mainHeaderEl.classList.remove('main-header--nojs');
 
 
 burgerEl.addEventListener('click', () => {

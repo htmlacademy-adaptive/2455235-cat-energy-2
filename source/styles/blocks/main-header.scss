@@ -52,6 +52,12 @@
     opacity: 0.6;
   }
 
+  .main-header--nojs & {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-bottom: 0;
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -74,7 +80,21 @@
   }
 }
 
+.main-header__logo-text {
+  .main-header--nojs & {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 23px;
+  }
+}
+
+
 .main-header__main-nav {
+  .main-header--nojs & {
+    width: 100%;
+  }
+
   @media (min-width: $tablet-width) {
     flex-grow: 1;
     max-width: 500px;
@@ -101,7 +121,7 @@
     opacity: 0.3;
   }
 
-  .main-header__main-nav--nojs & {
+  .main-header--nojs & {
     display: none;
   }
 
@@ -148,7 +168,7 @@
 
 // если у пользователя не подключился js, открываем меню и скрываем кнопку бургера
 
-.main-header__main-nav--nojs .nav-list {
+.main-header--nojs .nav-list {
   opacity: 1;
   visibility: visible;
 }
@@ -163,6 +183,12 @@
   height: auto;
   max-height: calc(100vh - var(--header-height));
   overflow-y: auto;
+
+  .main-header--nojs & {
+    position: static;
+    width: 100%;
+    overflow-y: unset;
+  }
 
   @media (min-width: $tablet-width) {
     width: fit-content;

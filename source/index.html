@@ -19,7 +19,7 @@
 
 <body class="page__body">
 
-  <header class="main-header main-header--on-content">
+  <header class="main-header main-header--on-content main-header--nojs">
     <div class="container">
       <div class="main-header__content">
         <a class="main-header__logo-image logo-image" href="#">
@@ -29,7 +29,7 @@
             <img src="images/logo_mobile.svg" alt="Логотип компании." width="33" height="38">
           </picture>
         </a>
-        <a class="logo-text" href="#">
+        <a class="main-header__logo-text logo-text" href="#">
           <picture>
             <source media="(min-width: 1300px)" width="118" height="21" type="image/svg+xml" srcset="images/logo_text_light.svg">
             <source media="(min-width: 768px)" width="101" height="18" type="image/svg+xml" srcset="images/logo_text_light.svg">
@@ -37,7 +37,7 @@
           </picture>
         </a>
         <!-- Чтобы преобразовать линии бургера в иконку "закрыть", запретить прокрутку контента под меню и открыть меню, добавьте класс с модификатором is-opened к элементу с классом main-header__main-nav -->
-        <nav class="main-header__main-nav main-header__main-nav--nojs">
+        <nav class="main-header__main-nav">
           <button class="main-header__burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
             <span class="main-header__burger-line main-header__burger-line--top"></span>
@@ -95,25 +95,17 @@
         <ul class="programs__list">
           <li class="programs__list-item">
             <article class="program-card program-card--slim">
-              <div class="program-card__image"></div>
               <h3 class="program-card__title">Похудение</h3>
               <p class="program-card__description">Ваш кот весит больше собаки и почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="program-card__link" href="catalog.html">Каталог slim
-                <div class="program-card__arrow-window">
-                  <div class="program-card__arrow-wrap"></div>
-                </div>
               </a>
             </article>
           </li>
           <li class="programs__list-item">
             <article class="program-card program-card--add-weight">
-              <div class="program-card__image"></div>
               <h3 class="program-card__title">Набор массы</h3>
               <p class="program-card__description">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="program-card__link" href="catalog.html">Каталог pro
-                <div class="program-card__arrow-window">
-                  <div class="program-card__arrow-wrap"></div>
-                </div>
               </a>
             </article>
           </li>
@@ -128,35 +120,27 @@
           <li class="application__list-item">
             <article class="application-card application-card--nutritionally">
               <h3 class="visually-hidden">Полезно</h3>
-              <div class="application-card__picture"></div>
               <p class="application-card__info">Функциональное питание
                 содержит только полезные
                 питательные вещества.</p>
-              <div class="application-card__number"></div>
             </article>
           </li>
           <li class="application__list-item">
             <article class="application-card application-card--easy">
               <h3 class="visually-hidden">Удобно в примении</h3>
-              <div class="application-card__picture"></div>
               <p class="application-card__info">Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.</p>
-              <div class="application-card__number"></div>
             </article>
           </li>
           <li class="application__list-item">
             <article class="application-card application-card--replaceable">
               <h3 class="visually-hidden">Замена обычной еды</h3>
-              <div class="application-card__picture"></div>
               <p class="application-card__info">Замените один-два приема обычной еды на&nbsp;наше функциональное питание.</p>
-              <div class="application-card__number"></div>
             </article>
           </li>
           <li class="application__list-item">
             <article class="application-card application-card--effectively">
               <h3 class="visually-hidden">Отличный результат</h3>
-              <div class="application-card__picture"></div>
               <p class="application-card__info">Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему <br> вашего питомца!</p>
-              <div class="application-card__number"></div>
             </article>
           </li>
         </ol>
@@ -254,7 +238,7 @@
   <footer class="main-footer">
     <div class="container">
       <div class="main-footer__wrap">
-        <a class="main-footer__logo-text logo-text logo-text--underlined" href="#">
+        <a class="main-footer__logo-text logo-text logo-text--underlined" href="index.html">
           <picture>
             <source media="(min-width: 1300px)" width="128" height="24" type="image/svg+xml" srcset="images/logo_text_light.svg">
             <source media="(min-width: 768px)" width="128" height="24" type="image/svg+xml" srcset="images/logo_text_light.svg">

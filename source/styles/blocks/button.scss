@@ -20,7 +20,7 @@
   }
 
   &:active {
-    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
   }
 
   &--dim {
@@ -29,6 +29,10 @@
 
     &:hover {
       background-color: $color-whisper;
+    }
+
+    &:active {
+      color: $color-charcoal;
     }
   }
 

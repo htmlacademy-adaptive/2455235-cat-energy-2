@@ -57,12 +57,12 @@
   mask-image: url("../../icons/stack.svg#phone");
 }
 
-.input--with-icon:has(.input__data:active):not(.input--error)::after {
+.input--with-icon:has(.input__data:focus):not(.input--error)::after {
   background-color: $color-apple;
 }
 
 .input__label {
-  max-width: 75px;
+  max-width: 100px;
 
   @media (min-width: $tablet-width) {
     max-width: 150px;
@@ -70,6 +70,7 @@
 }
 
 .input__data {
+  width: 100px;
   flex-grow: 1;
   min-height: 45px;
   padding: 13px 14px;

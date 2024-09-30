@@ -2,48 +2,62 @@
   display: grid;
   grid-template-columns: 60px 1fr;
   gap: 20px;
+  height: 100%;
   align-items: center;
   counter-increment: item-number 1;
 
-  @media (min-width: $tablet-width) {
-    grid-template-columns: 113px min-content;
-    grid-template-rows: 120px 1fr;
-    gap: 31px 0;
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    grid-column: 1 / 2;
+    align-self: start;
+    background-color: $color-apple;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-}
 
-.application-card__picture {
-  width: 60px;
-  height: 60px;
-  align-self: start;
-  background-color: $color-apple;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  .application-card--nutritionally & {
+  &--nutritionally::before {
     background-image: url("../../icons/stack.svg#leaf");
     background-size: 30px 32px;
   }
 
-  .application-card--easy & {
+  &--easy::before {
     background-image: url("../../icons/stack.svg#powder");
     background-size: 26px 29px;
   }
 
-  .application-card--replaceable & {
+  &--replaceable::before {
     background-image: url("../../icons/stack.svg#fork_knife");
     background-size: 25px 30px;
   }
 
-  .application-card--effectively & {
+  &--effectively::before {
     background-image: url("../../icons/stack.svg#clock");
     background-size: 26px 31px;
   }
 
   @media (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
-    align-self: end;
+    grid-template-columns: 113px min-content;
+    grid-template-rows: 120px 1fr;
+    gap: 31px 0;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      align-self: end;
+    }
+
+    &::after {
+      content: counter(item-number);
+      grid-column: 2 / 3;
+      grid-row: 1 / -1;
+      align-self: end;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 1;
+      color: $color-white-smoke;
+    }
   }
 }
 
@@ -67,25 +81,6 @@
 
     & br {
       display: block;
-    }
-  }
-}
-
-.application-card__number {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
-    align-self: start;
-
-    &::after {
-      content: counter(item-number);
-      font-family: $secondary-font;
-      font-size: 280px;
-      line-height: 1;
-      color: $color-white-smoke;
     }
   }
 }
