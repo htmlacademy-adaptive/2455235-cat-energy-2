@@ -187,6 +187,7 @@
   .main-header--nojs & {
     position: static;
     width: 100%;
+    overflow-y: unset;
   }
 
   @media (min-width: $tablet-width) {

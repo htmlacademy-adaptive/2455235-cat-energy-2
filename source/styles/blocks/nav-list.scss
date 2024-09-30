@@ -24,6 +24,10 @@
   display: block;
   width: 100%;
 
+  .main-header--nojs & {
+    position: relative;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -32,8 +36,10 @@
     background-color: $color-whisper;
 
     .main-header--nojs & {
+      width: 100vw;
       position: absolute;
-      left: 0;
+      left: calc(-50vw + 50%);
+      bottom: 0;
     }
   }
 
@@ -45,8 +51,10 @@
     background-color: $color-whisper;
 
     .main-header--nojs & {
+      width: 100vw;
       position: absolute;
-      left: 0;
+      left: calc(-50vw + 50%);
+      top: 0;
     }
   }
 
@@ -71,6 +79,7 @@
   padding: 22px 22px 23px;
   text-decoration: none;
   color: $color-black;
+  text-align: center;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 1;
